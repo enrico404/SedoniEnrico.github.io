@@ -15,13 +15,13 @@
               <button class="btn btn-primary" v-on:click="showDiv">
                 indietro
               </button>
-              <button id="crea" class="btn btn-primary" v-on:click="showDiv">
+              <button id="crea" class="btn btn-primary" v-on:click="posta">
                 Crea
               </button>
               <p class="titolo">Titolo:</p>
-              <input type="text" name="testo" />
+              <input type="text" name="testo" v-model="post.titolo"/>
               <p class="titolo">Descrizione:</p>
-              <textarea name="descr" id="descr" cols="30" rows="10"></textarea>
+              <textarea name="descr" id="descr" cols="30" rows="10" v-model="post.descr"></textarea>
 
           </div>
 
@@ -59,10 +59,10 @@ export default {
 
 
         post:{
-          id: 1,
+
           titolo: 'tit1',
           descr:'questo post prova',
-          data: (new Date().getFullYear())
+
 
 
 
@@ -77,13 +77,39 @@ export default {
 
   methods:{
 
-    showDiv:function(){
+    showDiv(){
 
         this.showFlag = !this.showFlag
 
 
+    },
+
+    posta(){
+        this.$http.post('http://localhost:3000/blog/post', {
+          titolo: this.post.titolo,
+          descr: this.post.descr
+        }).then(function(data){
+
+            console.log(data);
+
+
+        });
+        console.log('richiesta eseguita');
+
     }
 
+
+
+  },
+
+  created(){
+
+    this.$http.get('http://localhost:3000/blog/get').then(function(data){
+
+    this.posts = data;
+    console.log(this.posts);
+
+    });
 
 
   }

@@ -1,0 +1,165 @@
+<template>
+<div>
+    <MyHeader></MyHeader>
+    <slider></slider>
+    <anag></anag>
+
+    <h2>Blog</h2>
+
+          <button class="btn btn-primary" v-on:click="showDiv">
+              Create a new post
+          </button>
+
+
+          <div class="inputPost" v-show="this.showFlag"><br>
+              <button class="btn btn-primary" v-on:click="showDiv">
+                indietro
+              </button>
+              <button id="crea" class="btn btn-primary" v-on:click="showDiv">
+                Crea
+              </button>
+              <p class="titolo">Titolo:</p>
+              <input type="text" name="testo" />
+              <p class="titolo">Descrizione:</p>
+              <textarea name="descr" id="descr" cols="30" rows="10"></textarea>
+
+          </div>
+
+    <div class="articolo">
+
+
+
+    </div>
+
+    <MyFooter></MyFooter>
+</div>
+</template>
+
+<script>
+
+import Slider from './slider'
+import Header from './header'
+import Footer from './footer'
+import Anag from './anag'
+
+
+export default {
+
+  components:{
+
+    'slider':Slider,
+    'MyHeader':Header,
+    'MyFooter':Footer,
+     'anag':Anag,
+
+  },
+
+  data () {
+    return {
+
+
+        post:{
+          id: 1,
+          titolo: 'tit1',
+          descr:'questo post prova',
+          data: (new Date().getFullYear())
+
+
+
+        },
+        posts: [],
+        showFlag: false
+
+
+    }
+  },
+
+
+  methods:{
+
+    showDiv:function(){
+
+        this.showFlag = !this.showFlag
+
+
+    }
+
+
+
+  }
+
+
+}
+</script>
+
+<style>
+
+
+#crea{
+  float: right;
+  margin-right: 70px;
+
+}
+textarea{
+
+  max-height: 340px;
+
+}
+
+h2{
+  margin-left: 20px;
+  margin-top:40px;
+  margin-bottom: 20px;
+  }
+
+#descr{
+  width: 85%;
+  height: 45%;
+  margin-left: 20px;
+
+
+
+}
+input{
+
+  margin-left: 20px;
+  width: 85%;
+
+}
+
+.titolo{
+  padding-left: 20px;
+  padding-top: 20px;
+  font-size: 18pt;
+  font-weight: bold;
+  }
+
+.inputPost{
+  border: 1px solid gray;
+  border-radius: 18px;
+  background-color: white;
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  margin-top: -450px;
+  margin-left: 260px;
+  z-index: 1;
+
+
+
+  }
+
+
+.articolo{
+  border-radius: 12px;
+  margin-left: 20px;
+  margin-top: 50px;
+  border: 1px solid gray;
+  background-color: gray;
+  width: 60%;
+  height: 150px;
+
+  }
+
+
+</style>

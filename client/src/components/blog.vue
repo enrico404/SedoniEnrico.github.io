@@ -25,10 +25,10 @@
 
           </div>
 
-    <div class="articolo">
-
-
-
+    <div class="articolo" v-for="post in posts" :key="post.titolo">
+      <h4 class="titoloArt">{{ post.titolo | toUpperString}}</h4>
+      <p>{{ post.data }}</p>
+      <p>{{ post.descr }}</p>
     </div>
 
     <MyFooter></MyFooter>
@@ -60,11 +60,8 @@ export default {
 
         post:{
 
-          titolo: 'tit1',
-          descr:'questo post prova',
-
-
-
+          titolo: '',
+          descr:'',
 
         },
         posts: [],
@@ -85,17 +82,19 @@ export default {
     },
 
     posta(){
-        this.$http.post('http://localhost:3000/blog/post', {
-          titolo: this.post.titolo,
-          descr: this.post.descr
-        }).then(function(data){
 
-            console.log(data);
+        if(this.post.titolo != '' && this.post.descr != '') {
+            this.$http.post('http://localhost:3000/blog/post', {
+              titolo: this.post.titolo,
+              descr: this.post.descr,
+              data: new Data().toLocaleDateString()
+            }).then(function(data){
 
-
-        });
-        console.log('richiesta eseguita');
-
+                console.log(data);
+            });
+            this.showFlag = !this.showFlag;
+         }
+        else alert("inserire titolo e descrizione del post");
     }
 
 
@@ -105,11 +104,19 @@ export default {
   created(){
 
     this.$http.get('http://localhost:3000/blog/get').then(function(data){
+      this.posts = data.body.slice(0,10);
 
-    this.posts = data;
-    console.log(this.posts);
 
     });
+
+
+  },
+
+  filters:{
+    toUpperString(data){
+      return data.toUpperCase();
+
+    }
 
 
   }
@@ -119,6 +126,8 @@ export default {
 </script>
 
 <style>
+
+
 
 
 #crea{
@@ -177,15 +186,27 @@ input{
 
 
 .articolo{
-  border-radius: 12px;
+  border-radius: 8px;
   margin-left: 20px;
   margin-top: 50px;
   border: 1px solid gray;
-  background-color: gray;
   width: 60%;
   height: 150px;
+  padding-left: 15px;
+  padding-top: 15px;
+  overflow-y: scroll;
 
   }
+.titoloArt{
 
+  font-weight:bold;
+  transition: 0.2s ease-in;
+
+}
+
+.titoloArt:hover{
+  cursor: pointer;
+  color: #43ae97;
+}
 
 </style>

@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const pg = require('pg')
 
 
-var conString = "postgres://zrqtxhzs:U1yc6ybi-HSMx8DTfkqngKUv3X4ae2i8@pellefant.db.elephantsql.com:5432/zrqtxhzs";
+var conString = "postgres://ppmmcdih:lsOjVAok6dhKhl8s_fuJp5LbD-OoNu25@horton.elephantsql.com:5432/ppmmcdih";
 
 
 
@@ -31,7 +31,6 @@ app.get('/blog/get', function (req, res) {
               return console.error('error running query', err);
             }
             
-
             res.send(result.rows);
             client.end();
            

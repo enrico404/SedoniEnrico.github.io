@@ -1,7 +1,7 @@
 <template>
 <div class="HeadGroup" >
    <div class="title">
-     <h4 class="name" id="nome">{{ name }}</h4>
+     <p class="name" id="nome">{{ name }}</p>
    </div>
     <div class="nb">
       <ul class="nav justify-content-end ">
@@ -32,18 +32,21 @@ export default {
   data () {
     return {
       name: 'Sedoni Enrico',
-      fontSize: 23
+      fontSize: 40
     }
   },
 
   methods:{
 
     handleScroll: function(){
-      if(this.fontSize < 40)
-        this.fontSize++;
+      if(window.scrollY != 0 && this.fontSize > 23)
+        this.fontSize--;
       document.getElementById("nome").style.fontSize = this.fontSize +"px";
 
-
+      if(window.scrollY == 0){
+         document.getElementById("nome").style.fontSize = "40px";
+         this.fontSize = 40;
+         }
     }
 
 
@@ -51,6 +54,7 @@ export default {
 
   created () {
     document.addEventListener('scroll', this.handleScroll);
+    wondow.scrollY = 0;
   },
   destroyed () {
     document.removeEventListener('scroll', this.handleScroll);
@@ -103,6 +107,7 @@ a:hover{
 }
 
 .name{
+  font-size: 40px;
   text-align: center;
   color: white;
   font-family: Arial, Helvetica, sans-serif;

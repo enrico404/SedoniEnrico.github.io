@@ -4,17 +4,15 @@
     <slider></slider>
     <anag></anag>
 
-    <div class="about">
+    <div class="about container">
         <p class="textAbout">About me..</p>
         <p class="text1">Benvenuto! Mi chiamo Sedoni Enrico ed ho 21 anni. Sono un ragazzo con la passione per l'informatica e la programmazione.
-        Sono disponibile per lavori sia come front-end developer, sia come back-end developer. Attualmente sto frequentando un corso di laurea in informatica presso l'università di Modena e Reggio Emilia (UNIMORE).
+         Attualmente sto frequentando un corso di laurea in informatica presso l'università di Modena e Reggio Emilia (UNIMORE).
         Sono al terzo anno, quindi valuto offerte di lavoro sia part-time che full-time.<br><br>
         Questo è un sito realizzato interamente da me e verrà utlizzato come portfolio dei miei progetti personali.</p>
         <div class="aboutImm">
           <img src="src/assets/about1.png" width="180" height="145"  />
         </div>
-
-
     </div>
 
     <MyFooter></MyFooter>

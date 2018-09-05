@@ -27,7 +27,7 @@ export default {
 
 .body{
   background-color: #ecf0f1;
-
+  height: 100%;
 
 }
 </style>

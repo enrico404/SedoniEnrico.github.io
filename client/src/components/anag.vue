@@ -4,8 +4,8 @@
     <div class="profile">
             <img style="border-radius:20px;" src="src/assets/myPhoto.jpg" width="220" height="220" />
             <div class="social" >
-              <a href="https://www.facebook.com/xXEnricoXx" target="_blank">
-                <img src="src/assets/facebook.png" width="22" height="22" />
+              <a  href="https://www.facebook.com/xXEnricoXx" target="_blank">
+                <img src="src/assets/facebook.png"  width="22" height="22" />
               </a>
                <a href="https://www.instagram.com/enri_sedo/?hl=it" target="_blank">
                 <img src="src/assets/instagram.png" width="22" height="22" />
@@ -22,7 +22,7 @@
         <button type="button" class="btn btn-primary" onclick="window.open('https://drive.google.com/open?id=1lksqHTVCJfjen2vZDKH1GKQ92L90EVAW')">Download my CV</button>
       </div>
     </div>
-     <div class="dataAnag">
+     <div class=" dataAnag shadow bg-white">
           <p>Cognome: {{ surname }}</p>
           <p>Nome: {{ name }}</p>
           <p>Eta': {{ age }}</p>

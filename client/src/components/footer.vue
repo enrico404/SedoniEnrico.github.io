@@ -1,6 +1,7 @@
 <template>
  <div>
-   <div class="footer">
+   <div style="height:180px;"></div>
+   <div class="card-footer text-muted">
      <p class="text">{{ msg }}</p>
 
    </div>
@@ -19,15 +20,8 @@ export default {
 </script>
 
 <style>
-.footer{
+.card-footer{
   background-color: #2980b9;
-  position: relative;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-top: 12px;
-  padding-bottom: 2px;
-  text-align: center;
   margin-top:180px;
 
 

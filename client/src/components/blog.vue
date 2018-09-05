@@ -11,7 +11,7 @@
           </button>
 
 
-          <div class="inputPost" v-show="this.showFlag"><br>
+          <div class="inputPost " v-show="this.showFlag"><br>
               <button class="btn btn-primary" v-on:click="showDiv">
                 indietro
               </button>
@@ -25,10 +25,10 @@
 
           </div>
 
-    <div class="articolo" v-for="post in posts" :key="post.titolo">
-      <h4 class="titoloArt">{{ post.titolo | toUpperString}}</h4>
-      <p>{{ post.data }}</p>
-      <p>{{ post.descr }}</p>
+    <div class="card articolo shadow rounded bg-white" v-for="post in posts" :key="post.titolo" >
+      <h4 class="titoloArt card-title">{{ post.titolo | toUpperString}}</h4>
+      <p class="artData card-text">{{ post.data.slice(0,10) }}</p>
+      <p class="card-text">{{ post.descr }}</p>
     </div>
 
     <MyFooter></MyFooter>
@@ -62,6 +62,7 @@ export default {
 
           titolo: '',
           descr:'',
+          data: ''
 
         },
         posts: [],
@@ -82,17 +83,28 @@ export default {
     },
 
     posta(){
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0
+        var yyyy = today.getFullYear();
+
+        var currentDate = yyyy+'-'+mm+'-'+dd;
+        this.post.data = currentDate;
+
+
 
         if(this.post.titolo != '' && this.post.descr != '') {
             this.$http.post('http://localhost:3000/blog/post', {
               titolo: this.post.titolo,
               descr: this.post.descr,
-              data: new Data().toLocaleDateString()
+              data: this.post.data
             }).then(function(data){
 
                 console.log(data);
             });
+            alert("Post inserito");
             this.showFlag = !this.showFlag;
+            location.reload();
          }
         else alert("inserire titolo e descrizione del post");
     }
@@ -104,7 +116,9 @@ export default {
   created(){
 
     this.$http.get('http://localhost:3000/blog/get').then(function(data){
-      this.posts = data.body.slice(0,10);
+
+      this.posts = data.body;
+      this.posts = this.posts.slice().reverse().slice(0,20);
 
 
     });
@@ -173,11 +187,10 @@ input{
   border: 1px solid gray;
   border-radius: 18px;
   background-color: white;
-  width: 600px;
-  height: 600px;
+  margin-left: 40%;
+
   position: absolute;
-  margin-top: -450px;
-  margin-left: 260px;
+
   z-index: 1;
 
 
@@ -191,10 +204,11 @@ input{
   margin-top: 50px;
   border: 1px solid gray;
   width: 60%;
-  height: 150px;
+  height: 250px;
   padding-left: 15px;
   padding-top: 15px;
   overflow-y: scroll;
+
 
   }
 .titoloArt{
@@ -209,4 +223,9 @@ input{
   color: #43ae97;
 }
 
+.artData{
+
+  font-size: 10pt;
+
+}
 </style>

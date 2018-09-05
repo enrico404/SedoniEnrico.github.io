@@ -56,10 +56,11 @@ app.get('/blog/get', function (req, res) {
           }
           
           
-         client.query("insert into posts values('"+req.body.titolo+"','"+ req.body.descr+"','"+req.body.data+"','"+req.body.img+"')", function(err, result,) {
+         client.query("insert into posts values('"+req.body.titolo.replace(/['"]/g,'')+"','"+ req.body.descr.replace(/['"]/g,'')+"','"+req.body.data+"','"+req.body.img+"')", function(err, result,) {
             
             if(err) {
-              return console.error('error running query', err);
+              res.send("error"); 
+              client.end();
             }
             
             res.send(result);

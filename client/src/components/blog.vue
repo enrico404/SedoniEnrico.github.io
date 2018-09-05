@@ -4,9 +4,9 @@
     <slider></slider>
     <anag></anag>
 
-    <h2>Blog</h2>
+    <h2 style="padding-left:15px">Blog</h2>
 
-          <button class="btn btn-primary" v-on:click="showDiv">
+          <button class="btn btn-primary" style="margin-left:35px" v-on:click="showDiv">
               Create a new post
           </button>
 
@@ -98,6 +98,8 @@ export default {
         var currentDate = yyyy+'-'+mm+'-'+dd;
         this.post.data = currentDate;
 
+        // if image is not set, i'll load the default image
+
         try {
           this.post.img = document.getElementById('image').files.item(0).name;
         } catch (error) {
@@ -116,9 +118,11 @@ export default {
 
             }).then(function(data){
 
-                console.log(data);
+                alert(data);
+
             });
-            alert("Post inserito");
+
+
             this.showFlag = !this.showFlag;
             location.reload();
          }
@@ -253,4 +257,6 @@ input{
   font-size: 10pt;
 
 }
+
+
 </style>

@@ -1,7 +1,7 @@
 <template>
 <div>
 
-    <div  class="carousel slide " data-ride="carousel">
+    <div  id="carouselExampleControls" class="carousel slide " data-ride="carousel">
       <div class="carousel-inner slider">
         <div class="carousel-item active">
           <img class="d-block w-100 imm" src="src/assets/img2.jpg"  alt="First slide">

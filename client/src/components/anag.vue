@@ -75,7 +75,6 @@ export default {
 .dataAnag{
   font-size: 8.5pt;
   border-radius: 10px;
-  border: 1px solid gray;
   padding: 10px 16px;
   margin-top: 100px;
   margin-right: 40px;

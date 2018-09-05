@@ -54,7 +54,7 @@ export default {
 
   created () {
     document.addEventListener('scroll', this.handleScroll);
-    wondow.scrollY = 0;
+
   },
   destroyed () {
     document.removeEventListener('scroll', this.handleScroll);

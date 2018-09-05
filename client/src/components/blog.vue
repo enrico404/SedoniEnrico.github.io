@@ -11,7 +11,7 @@
           </button>
 
 
-          <div class="inputPost " v-show="this.showFlag"><br>
+          <div class="inputPost horizontal-alignment " v-show="this.showFlag"><br>
               <button class="btn btn-primary" v-on:click="showDiv">
                 indietro
               </button>
@@ -22,13 +22,19 @@
               <input type="text" name="testo" v-model="post.titolo"/>
               <p class="titolo">Descrizione:</p>
               <textarea name="descr" id="descr" cols="30" rows="10" v-model="post.descr"></textarea>
-
+              <label class="btn btn-primary mb-4 mt-4">
+                Choose an image
+                <input type="file" style="position: fixed; top: -100em" id="image" />
+              </label>
           </div>
 
-    <div class="card articolo shadow rounded bg-white" v-for="post in posts" :key="post.titolo" >
+    <div class="card articolo" v-for="post in posts" :key="post.titolo" >
+      <img class="card-img-top" v-bind:src="'src/assets/'+ post.img" alt="card image" />
+      <br>
       <h4 class="titoloArt card-title">{{ post.titolo | toUpperString}}</h4>
       <p class="artData card-text">{{ post.data.slice(0,10) }}</p>
       <p class="card-text">{{ post.descr }}</p>
+      <br>
     </div>
 
     <MyFooter></MyFooter>
@@ -62,7 +68,8 @@ export default {
 
           titolo: '',
           descr:'',
-          data: ''
+          data: '',
+          img: ''
 
         },
         posts: [],
@@ -91,13 +98,22 @@ export default {
         var currentDate = yyyy+'-'+mm+'-'+dd;
         this.post.data = currentDate;
 
+        try {
+          this.post.img = document.getElementById('image').files.item(0).name;
+        } catch (error) {
+          this.post.img = 'default.jpg';
+        }
 
 
-        if(this.post.titolo != '' && this.post.descr != '') {
+
+        if(this.post.titolo != '' && this.post.descr != '' ) {
             this.$http.post('http://localhost:3000/blog/post', {
               titolo: this.post.titolo,
               descr: this.post.descr,
-              data: this.post.data
+              data: this.post.data,
+              img: this.post.img
+
+
             }).then(function(data){
 
                 console.log(data);
@@ -141,7 +157,19 @@ export default {
 
 <style>
 
+.horizontal-alignment{
 
+  position: fixed;
+  top: 20%;
+  left: 33%;
+
+}
+
+.card-img-top{
+  width: 400px;
+  height: 180px;
+
+}
 
 
 #crea{
@@ -185,12 +213,8 @@ input{
 
 .inputPost{
   border: 1px solid gray;
-  border-radius: 18px;
+  border-radius: 0px;
   background-color: white;
-  margin-left: 40%;
-
-  position: absolute;
-
   z-index: 1;
 
 
@@ -199,15 +223,16 @@ input{
 
 
 .articolo{
-  border-radius: 8px;
+  background: transparent;
   margin-left: 20px;
   margin-top: 50px;
-  border: 1px solid gray;
+  border: none;
   width: 60%;
-  height: 250px;
   padding-left: 15px;
   padding-top: 15px;
-  overflow-y: scroll;
+  border-bottom: 1px solid gray;
+  border-radius: 0px;
+
 
 
   }

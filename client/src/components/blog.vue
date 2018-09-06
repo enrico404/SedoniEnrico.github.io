@@ -1,6 +1,6 @@
 <template>
 <div>
-    <MyHeader></MyHeader>
+
     <slider></slider>
     <anag></anag>
 
@@ -41,15 +41,14 @@
       </div>
     </div>
 
-    <MyFooter></MyFooter>
+
 </div>
 </template>
 
 <script>
 
 import Slider from './slider'
-import Header from './header'
-import Footer from './footer'
+
 import Anag from './anag'
 
 
@@ -58,9 +57,7 @@ export default {
   components:{
 
     'slider':Slider,
-    'MyHeader':Header,
-    'MyFooter':Footer,
-     'anag':Anag,
+     'anag':Anag
 
   },
 
@@ -122,30 +119,42 @@ export default {
 
             }).then(function(data){
 
-                alert(data.body);
+                if(data.body == "errore"){
+                  alert("Errore nell'inserimento del post, il titolo potrebbe già esistere!");
+
+                }else {
+
+                    this.showFlag = !this.showFlag;
+                    this.getArticles();
+
+                }
 
             });
 
 
-            this.showFlag = !this.showFlag;
-            location.reload();
+
          }
         else alert("inserire titolo e descrizione del post");
-    }
+
+    },
 
 
+  getArticles(){
+
+     this.$http.get('http://localhost:3000/blog/get').then(function(data){
+
+      this.posts = data.body;
+      this.posts = this.posts.slice().reverse().slice(0,20);
+      });
+
+
+  }
 
   },
 
   created(){
 
-    this.$http.get('http://localhost:3000/blog/get').then(function(data){
-
-      this.posts = data.body;
-      this.posts = this.posts.slice().reverse().slice(0,20);
-
-
-    });
+    this.getArticles();
 
 
   },

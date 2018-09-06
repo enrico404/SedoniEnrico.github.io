@@ -22,7 +22,7 @@
         </li>
       </ul>
 
-      <button class="btn" v-on:click="showForm">Login</button>
+      <button class="btn" v-on:click="showForm">{{login}}</button>
     </div>
 
      <div class="log" v-show="this.showFlag">
@@ -59,7 +59,8 @@ export default {
       showFlag: false,
       user: '',
       psw: '',
-      account: []
+      account: [],
+      login: 'Login'
     }
   },
 
@@ -95,12 +96,16 @@ export default {
 
 
         }).then(function(data){
+          console.log(data.body[0].username);
 
-          this.account = data.body;
-          if(this.user = account[0].unsername && this.psw == account[0].password){
+          if(this.user == data.body[0].username && this.psw == data.body[0].password){
 
-            alert("accesso riuscito!")
-          }else alert("cedenziali errate, riprova! User: "+data.body.unsername+" psw: "+ data.body.password);
+            alert("accesso riuscito!");
+            this.login ="Sei loggato come: "+ this.user;
+            this.showFlag = !this.showFlag;
+
+
+          }else alert("cedenziali errate, riprova!");
 
         });
 

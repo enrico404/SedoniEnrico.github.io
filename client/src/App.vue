@@ -1,17 +1,30 @@
 <template>
   <div id="app" class="body">
 
-      <router-view></router-view>
+        <keep-alive>
+            <MyHeader></MyHeader>
+        </keep-alive>
+
+        <router-view></router-view>
+
+        <keep-alive>
+          <MyFooter></MyFooter>
+        </keep-alive>
 
   </div>
 </template>
 
 <script>
-
-
+import Header from './components/header'
+import Footer from './components/footer'
 
 export default {
   name: 'app',
+
+  components:{
+    'MyHeader': Header,
+    'MyFooter': Footer
+  },
 
   data () {
     return {

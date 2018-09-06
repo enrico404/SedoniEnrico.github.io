@@ -59,8 +59,8 @@ app.get('/blog/get', function (req, res) {
          client.query(query , function(err, result,) {
             
             if(err) {
-              
-              res.send(err); 
+             
+              res.send("errore"); 
               client.end();
             }else{
               res.send(result);
@@ -93,7 +93,7 @@ app.get('/blog/get', function (req, res) {
 
         }else{
           console.log("query riuscita!");
-          res.send(result);
+          res.send(result.rows);
           client.end();
 
         }

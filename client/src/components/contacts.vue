@@ -1,6 +1,5 @@
 <template>
 <div>
-    <MyHeader></MyHeader>
     <slider></slider>
     <anag></anag>
     <div class="text">
@@ -27,15 +26,12 @@
               </a>
             </div>
     </div>
-    <MyFooter></MyFooter>
 </div>
 </template>
 
 <script>
 
 import Slider from './slider'
-import Header from './header'
-import Footer from './footer'
 import Anag from './anag'
 
 
@@ -43,9 +39,8 @@ export default {
 
   components:{
     'anag':Anag,
-    'slider':Slider,
-    'MyHeader':Header,
-    'MyFooter':Footer
+    'slider':Slider
+
 
   },
 

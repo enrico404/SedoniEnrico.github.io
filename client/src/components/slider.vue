@@ -45,14 +45,14 @@ export default {
 <style>
 .slider{
 
-  height: 545px;
+  height: 665px;
 
 }
 /* height and width of the images */
 .imm{
-  padding-top: 105px;
+  padding-top: 145px;
   width: 100%;
-  height: 545px;
+  height: 565px;
 
 }
 

@@ -4,37 +4,41 @@
     <slider></slider>
     <anag></anag>
 
-    <h2 style="padding-left:15px">Blog</h2>
 
-          <button class="btn btn-primary" style="margin-left:35px" v-on:click="showDiv">
-              Create a new post
-          </button>
+  <div class="blog">
+      <div class="subtitle">
+      <h2 style="padding-left:15px; margin-top:-10px;">Blog</h2>
 
+            <button class="btn btn-primary" style="margin-left:35px" v-on:click="showDiv">
+                Create a new post
+            </button>
+      </div>
 
-          <div class="inputPost horizontal-alignment " v-show="this.showFlag"><br>
-              <button class="btn btn-primary" v-on:click="showDiv">
-                indietro
-              </button>
-              <button id="crea" class="btn btn-primary" v-on:click="posta">
-                Crea
-              </button>
-              <p class="titolo">Titolo:</p>
-              <input type="text" name="testo" v-model="post.titolo"/>
-              <p class="titolo">Descrizione:</p>
-              <textarea name="descr" id="descr" cols="30" rows="10" v-model="post.descr"></textarea>
-              <label class="btn btn-primary mb-4 mt-4">
-                Choose an image
-                <input type="file" style="position: fixed; top: -100em" id="image" />
-              </label>
-          </div>
+            <div class="inputPost" v-show="this.showFlag"><br>
+                <button class="btn btn-primary" v-on:click="showDiv">
+                  indietro
+                </button>
+                <button id="crea" class="btn btn-primary" v-on:click="posta">
+                  Crea
+                </button>
+                <p class="titolo">Titolo:</p>
+                <input type="text" name="testo" v-model="post.titolo"/>
+                <p class="titolo">Descrizione:</p>
+                <textarea name="descr" id="descr" cols="30" rows="10" v-model="post.descr"></textarea>
+                <label class="btn btn-primary mb-4 mt-4">
+                  Choose an image
+                  <input type="file" style="position: fixed; top: -100em" id="image" />
+                </label>
+            </div>
 
-    <div class="card articolo" v-for="post in posts" :key="post.titolo" >
-      <img class="card-img-top" v-bind:src="'src/assets/'+ post.img" alt="card image" />
-      <br>
-      <h4 class="titoloArt card-title">{{ post.titolo | toUpperString}}</h4>
-      <p class="artData card-text">{{ post.data.slice(0,10) }}</p>
-      <p class="card-text">{{ post.descr }}</p>
-      <br>
+      <div class="card articolo" v-for="post in posts" :key="post.titolo" >
+        <img class="card-img-top" v-bind:src="'src/assets/'+ post.img" alt="card image" />
+        <br>
+        <h4 class="titoloArt card-title">{{ post.titolo | toUpperString}}</h4>
+        <p class="artData card-text">{{ post.data.slice(0,10) }}</p>
+        <p class="card-text">{{ post.descr }}</p>
+        <br>
+      </div>
     </div>
 
     <MyFooter></MyFooter>
@@ -118,7 +122,7 @@ export default {
 
             }).then(function(data){
 
-                alert(data);
+                alert(data.body);
 
             });
 
@@ -161,13 +165,34 @@ export default {
 
 <style>
 
-.horizontal-alignment{
+.blog{
+  height: 40%;
 
-  position: fixed;
-  top: 20%;
-  left: 33%;
 
 }
+
+
+.subtitle{
+
+  opacity: 0;
+  animation-name: entry;
+  animation-duration:0.4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+
+}
+
+
+@keyframes entry{
+
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+
+}
+
 
 .card-img-top{
   width: 400px;
@@ -215,15 +240,7 @@ input{
   font-weight: bold;
   }
 
-.inputPost{
-  border: 1px solid gray;
-  border-radius: 0px;
-  background-color: white;
-  z-index: 1;
 
-
-
-  }
 
 
 .articolo{
@@ -236,6 +253,11 @@ input{
   padding-top: 15px;
   border-bottom: 1px solid gray;
   border-radius: 0px;
+  opacity: 0;
+  animation-name: entry;
+  animation-duration:0.4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
 
 
 
@@ -257,6 +279,32 @@ input{
   font-size: 10pt;
 
 }
+
+
+.inputPost{
+  border: 1px solid gray;
+  border-radius: 0px;
+  background-color: white;
+  z-index: 1;
+  position: fixed;
+  top: 20%;
+  left: 33%;
+  animation-name: entrance;
+  animation-duration:0.1s;
+  animation-timing-function: linear;
+
+
+
+  }
+
+ /* animation */
+  @keyframes entrance{
+    0% { transform:  scale(0)}
+    100% { transform:  scale(1); }
+
+
+  }
+
 
 
 </style>

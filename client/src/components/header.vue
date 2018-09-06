@@ -21,18 +21,45 @@
           </router-link>
         </li>
       </ul>
+
+      <button class="btn" v-on:click="showForm">Login</button>
     </div>
+
+     <div class="log" v-show="this.showFlag">
+    <form>
+      <p>Username: </p>
+      <input type="text" ref="user" />
+      <br><br>
+      <p>Password: </p>
+      <input type="password" ref="password" />
+      <br><br>
+      <button class="btn btn-primary cancelB" v-on:click="showForm">Cancel</button>
+      <button class="btn btn-primary loginB" v-on:click="loginF">Login</button>
+    </form>
+
+  </div>
+
+
  </div>
+
 
 </template>
 
 <script>
+
+
+
 export default {
+
 
   data () {
     return {
       name: 'Sedoni Enrico',
-      fontSize: 40
+      fontSize: 40,
+      showFlag: false,
+      user: '',
+      psw: '',
+      account: []
     }
   },
 
@@ -47,6 +74,39 @@ export default {
          document.getElementById("nome").style.fontSize = "40px";
          this.fontSize = 40;
          }
+    },
+
+
+    showForm(){
+      this.showFlag = !this.showFlag;
+    },
+
+
+    loginF(){
+
+      this.user = this.$refs.user.value;
+      this.psw = this.$refs.password.value;
+
+      if(this.user != '' && this.psw != ''){
+
+        this.$http.post('http://localhost:3000/login',{
+
+          user: this.user
+
+
+        }).then(function(data){
+
+          this.account = data.body;
+          if(this.user = account[0].unsername && this.psw == account[0].password){
+
+            alert("accesso riuscito!")
+          }else alert("cedenziali errate, riprova! User: "+data.body.unsername+" psw: "+ data.body.password);
+
+        });
+
+
+      }else alert("Devi inserire lo username e la password!");
+
     }
 
 
@@ -67,12 +127,41 @@ export default {
 
 <style scoped>
 
+.nb > .btn  {
+
+  margin-top: -35px;
+  position: absolute;
+  background-color: transparent;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: underline;
+}
+
+.nb > .btn:hover{
+  background-color:  #43ae97;
+  color: white;
+
+
+}
+
 .router-link-exact-active > a{
 
   background-color: #43ae97;
   border-radius: 10px;
   color:white;
+  animation-name: selectedMenu;
+  animation-duration: 0.28s;
+  animation-timing-function: linear;
 
+
+
+}
+
+@keyframes selectedMenu {
+  0% { transform: scale(0)}
+  50% { transform: scale(1)}
+  80% {transform: scale(0.9)}
+  100%{ transform: scale(1)}
 
 }
 
@@ -124,6 +213,34 @@ a:hover{
   height: 50px;
   padding-bottom:10px;
 
+
+}
+
+
+input{
+  width: 90%;
+
+}
+.loginB{
+  float: right;
+
+}
+
+
+.cancelB{
+
+  float:left;
+}
+
+.log{
+  position: fixed;
+  background-color: white;
+  border: 1px solid gray;
+  left: 33%;
+  top: 20%;
+  border-radius: 10px;
+  padding: 20px 20px;
+  width: 23%;
 
 }
 

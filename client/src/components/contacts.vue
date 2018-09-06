@@ -68,7 +68,20 @@ export default {
   width: 58%;
   height: 420px;
   background-color: #3498db;
+  opacity: 0;
+  animation-name: entry;
+  animation-duration:0.4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards
 
+}
+@keyframes entry{
+
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
 
 }
 

@@ -55,24 +55,58 @@ app.get('/blog/get', function (req, res) {
             return console.error('could not connect to postgres', err);
           }
           
-          
-         client.query("insert into posts values('"+req.body.titolo.replace(/['"]/g,'')+"','"+ req.body.descr.replace(/['"]/g,'')+"','"+req.body.data+"','"+req.body.img+"')", function(err, result,) {
+         var query = "insert into posts values('"+req.body.titolo.replace(/['"]/g,'')+"','"+ req.body.descr.replace(/['"]/g,'')+"','"+req.body.data+"','"+req.body.img+"')";
+         client.query(query , function(err, result,) {
             
             if(err) {
-              res.send("error"); 
+              
+              res.send(err); 
               client.end();
+            }else{
+              res.send(result);
+              client.end();
+
             }
-            
-            res.send(result);
-            client.end();
-
-
          });
          
     });
     
   });
 
+
+  app.post('/login', function(req, res){
+    var client = new pg.Client(conString);
+
+    client.connect(function(err){
+      if(err){
+
+        return console.error("database connection failed!", err);
+      }
+
+      var query = "select * from cred where username='"+req.body.user+"'";
+      client.query(query, function(err, result){
+
+        if(err){
+          console.log("query fallita!");
+          res.send("error");
+          client.end();
+
+        }else{
+          console.log("query riuscita!");
+          res.send(result);
+          client.end();
+
+        }
+
+
+
+      });
+
+
+    });
+
+  });
+
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+  console.log('Application listening on port 3000!');
 });

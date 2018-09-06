@@ -63,20 +63,20 @@ export default {
 
   margin-top: 100px;
 
+
 }
 
 .profile{
   width: 220px;
-  margin-top: 60px;
   margin-right: 35px;
   float: right;
-
+  margin-top: -40px;
 }
 .dataAnag{
   font-size: 8.5pt;
   border-radius: 10px;
   padding: 10px 16px;
-  margin-top: 100px;
+  margin-top: 20px;
   margin-right: 40px;
   float: right;
 

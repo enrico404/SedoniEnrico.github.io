@@ -4,9 +4,9 @@
         <keep-alive>
             <MyHeader></MyHeader>
         </keep-alive>
-
+  <keep-alive>
         <router-view></router-view>
-
+</keep-alive>
         <keep-alive>
           <MyFooter></MyFooter>
         </keep-alive>
@@ -18,6 +18,7 @@
 import Header from './components/header'
 import Footer from './components/footer'
 
+
 export default {
   name: 'app',
 
@@ -28,9 +29,17 @@ export default {
 
   data () {
     return {
-
+        
     }
-  }
+  },
+    methods: {
+
+    
+
+    },
+  
+
+ 
 }
 </script>
 

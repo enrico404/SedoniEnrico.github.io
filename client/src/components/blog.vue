@@ -6,10 +6,10 @@
 
 
   <div class="blog">
-      <div class="subtitle">
+      <div class="subtitle" >
       <h2 style="padding-left:15px; margin-top:-10px;">Blog</h2>
 
-            <button class="btn btn-primary" style="margin-left:35px" v-on:click="showDiv">
+            <button id="buttonCreate" class="btn btn-primary" style="margin-left:35px" v-on:click="showDiv">
                 Create a new post
             </button>
       </div>
@@ -48,12 +48,13 @@
 <script>
 
 import Slider from './slider'
-
+import EventBus from '../event_bus.js'
 import Anag from './anag'
 
 
 export default {
 
+ 
   components:{
 
     'slider':Slider,
@@ -74,7 +75,8 @@ export default {
 
         },
         posts: [],
-        showFlag: false
+        showFlag: false,
+        logged: false
 
 
     }
@@ -83,10 +85,12 @@ export default {
 
   methods:{
 
+
+    
     showDiv(){
 
-        this.showFlag = !this.showFlag
-
+        this.showFlag = !this.showFlag;
+        
 
     },
 
@@ -155,7 +159,20 @@ export default {
   created(){
 
     this.getArticles();
+    
 
+
+  },
+
+  mounted(){
+
+    EventBus.$on('LOG_SUCCESS', function(){
+      this.logged = true;
+      console.log("Cambio proprietà bottone..");
+      document.getElementById('buttonCreate').style.display ="block";
+      
+    });
+    
 
   },
 
@@ -174,6 +191,10 @@ export default {
 
 <style>
 
+#buttonCreate{
+  display: none;
+
+}
 .blog{
   height: 40%;
 
@@ -182,7 +203,7 @@ export default {
 
 
 .subtitle{
-
+  
   opacity: 0;
   animation-name: entry;
   animation-duration:0.4s;
@@ -296,14 +317,11 @@ input{
   background-color: white;
   z-index: 1;
   position: fixed;
-  top: 20%;
+  top: 10%;
   left: 33%;
   animation-name: entrance;
   animation-duration:0.1s;
   animation-timing-function: linear;
-
-
-
   }
 
  /* animation */

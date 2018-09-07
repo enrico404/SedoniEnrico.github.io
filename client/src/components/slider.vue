@@ -23,6 +23,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+    <br><br><br><br><br>
 </div>
 </template>
 
@@ -44,15 +45,15 @@ export default {
 
 <style>
 .slider{
-
-  height: 665px;
+  
+  height: 545px;
 
 }
 /* height and width of the images */
 .imm{
-  padding-top: 145px;
+  padding-top: 105px;
   width: 100%;
-  height: 565px;
+  height: 545px;
 
 }
 

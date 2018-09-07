@@ -48,7 +48,7 @@
 <script>
 
 
-
+import EventBus from '../event_bus.js'
 export default {
 
 
@@ -103,6 +103,7 @@ export default {
             alert("accesso riuscito!");
             this.login ="Sei loggato come: "+ this.user;
             this.showFlag = !this.showFlag;
+            EventBus.$emit('LOG_SUCCESS');
 
 
           }else alert("cedenziali errate, riprova!");

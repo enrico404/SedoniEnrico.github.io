@@ -59,7 +59,7 @@ export default {
   padding: 20px 20px;
   border-radius:10px;
   margin-top: 140px;
-  margin-left: 150px;
+  margin-left: 100px;
   width: 58%;
   height: 420px;
   background-color: #3498db;
@@ -99,6 +99,18 @@ p, span {
   font-size: 11pt;
 }
 
+@media (max-width:992px ){
+
+  .text{
+    width: 100vw;
+    margin-left: 0px;
+    border-radius: 0px;
+    margin-top: 300px;
+
+  }
+
+
+}
 
 
 

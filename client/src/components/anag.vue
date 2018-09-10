@@ -2,7 +2,7 @@
 <div>
 
     <div class="profile">
-            <img style="border-radius:20px;" src="src/assets/myPhoto.jpg" width="220" height="220" />
+            <img style="border-radius:20px;" src="src/assets/myPhoto.jpg" class="profileImg"  />
             <div class="social" >
               <a  href="https://www.facebook.com/xXEnricoXx" target="_blank">
                 <img src="src/assets/facebook.png"  width="22" height="22" />
@@ -55,9 +55,6 @@ export default {
   font-size: 10pt;
   margin-left: 20px;
 
-
-
-
 }
 .cv{
 
@@ -82,6 +79,91 @@ export default {
 
   }
 
+
+@media (max-width: 992px){
+    .cv{
+      margin-top: 0px;
+      top: 700px;
+      left: 110px;
+      position: absolute;
+
+    }
+
+    .dataAnag{
+
+      margin-top: -10px;
+
+    }
+    .profileImg{
+       
+       width:180px !important;
+       height:180px !important;
+
+
+    }
+
+}
+
+
+
+@media (max-width: 768px){
+  .cv{
+    top: 600px;
+    left: 24%;
+  
+  }
+
+   .dataAnag{
+
+      margin-top: 40px;
+      left: 18%;
+      position: absolute;
+
+    }
+    .profileImg{
+       margin-top: 60px;
+       width:180px !important;
+       height:180px !important;
+       left: 48%;
+       position:absolute;
+
+    }
+
+    .social{
+      top: 870px;
+      position: absolute;
+      left: 48%;
+
+    }
+
+
+
+}
+
+@media (max-width: 576px){
+
+  .dataAnag{
+    display: none;
+  }
+
+  .social{
+  margin-top: 10px;
+  left: 30%;
+
+}
+.profileImg{
+      
+       left: 30%;
+   
+
+    }
+}
+
+.profileImg{
+
+  width:220px;
+  height:220px;
+}
 .social{
   margin-top: 10px;
   margin-left: 12px;

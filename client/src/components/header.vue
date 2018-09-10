@@ -4,7 +4,7 @@
      <p class="name" id="nome">{{ name }}</p>
    </div>
     <div class="nb">
-      <ul class="nav justify-content-end ">
+      <ul class="nav ">
         <li class="nav-item">
           <router-link to='./'>
             <a class="nav-link active" >Home</a>
@@ -135,12 +135,15 @@ export default {
 
 .nb > .btn  {
 
-  margin-top: -35px;
-  position: absolute;
+  margin-top: 15px;
+  position: fixed;
   background-color: transparent;
   font-weight: bold;
   border-radius: 10px;
   text-decoration: underline;
+  left: 0px;
+
+
 }
 
 .nb > .btn:hover{
@@ -229,7 +232,6 @@ input{
 }
 .loginB{
   float: right;
-
 }
 
 
@@ -246,9 +248,40 @@ input{
   top: 20%;
   border-radius: 10px;
   padding: 20px 20px;
-  width: 23%;
+  width: 300px;
+
+}
+ul{
+  float: right;
 
 }
 
+.nb{
+  padding-bottom: 60px;
+}
+
+/* responsive */
+
+@media (max-width: 576px){
+
+  .nb > ul{
+    float: left;
+    padding-top: 45px;
+
+  }
+  .nb{
+    padding-bottom: 110px;
+  }
+
+  .nb > .btn {
+
+    float: left;
+    left: -18px;
+
+
+  }
+
+
+}
 
 </style>

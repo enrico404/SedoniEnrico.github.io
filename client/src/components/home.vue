@@ -3,7 +3,7 @@
     <slider></slider>
     <anag></anag>
 
-    <div class="about container">
+    <div class="about ">
         <p class="textAbout">About me..</p>
         <p class="text1">Benvenuto! Mi chiamo Sedoni Enrico ed ho 21 anni. Sono un ragazzo con la passione per l'informatica e la programmazione.
          Attualmente sto frequentando un corso di laurea in informatica presso l'università di Modena e Reggio Emilia (UNIMORE).
@@ -96,12 +96,13 @@ export default {
 @media (max-width: 992px){
 
    .about{
-  
+
     width: 100vw;
     margin-left: 0px;
     border-radius: 0px;
     margin-top: 300px;
     height: 550px;
+
 
    }
 

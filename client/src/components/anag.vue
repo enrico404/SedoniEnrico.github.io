@@ -83,7 +83,7 @@ export default {
 @media (max-width: 992px){
     .cv{
       margin-top: 0px;
-      top: 700px;
+      top: 550px;
       left: 110px;
       position: absolute;
 
@@ -95,7 +95,7 @@ export default {
 
     }
     .profileImg{
-       
+
        width:180px !important;
        height:180px !important;
 
@@ -108,9 +108,9 @@ export default {
 
 @media (max-width: 768px){
   .cv{
-    top: 600px;
+    top: 450px;
     left: 24%;
-  
+
   }
 
    .dataAnag{
@@ -130,7 +130,7 @@ export default {
     }
 
     .social{
-      top: 870px;
+      top: 720px;
       position: absolute;
       left: 48%;
 
@@ -142,19 +142,24 @@ export default {
 
 @media (max-width: 576px){
 
+  .cv{
+      top: 415px;
+      left: 24%;
+
+    }
   .dataAnag{
     display: none;
   }
 
   .social{
-  margin-top: 10px;
+  top: 695px;
   left: 30%;
 
 }
 .profileImg{
-      
+
        left: 30%;
-   
+
 
     }
 }

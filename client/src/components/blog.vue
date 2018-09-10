@@ -54,7 +54,7 @@ import Anag from './anag'
 
 export default {
 
- 
+
   components:{
 
     'slider':Slider,
@@ -86,11 +86,11 @@ export default {
   methods:{
 
 
-    
+
     showDiv(){
 
         this.showFlag = !this.showFlag;
-        
+
 
     },
 
@@ -159,7 +159,7 @@ export default {
   created(){
 
     this.getArticles();
-    
+
 
 
   },
@@ -170,9 +170,9 @@ export default {
       this.logged = true;
       console.log("Cambio proprietà bottone..");
       document.getElementById('buttonCreate').style.display ="block";
-      
+
     });
-    
+
 
   },
 
@@ -203,7 +203,7 @@ export default {
 
 
 .subtitle{
-  
+
   opacity: 0;
   animation-name: entry;
   animation-duration:0.4s;
@@ -332,6 +332,16 @@ input{
 
   }
 
+/* responsive */
+@media (max-width: 992px){
+  .blog{
+
+    margin-top: 280px;
+
+  }
+
+
+}
 
 
 </style>

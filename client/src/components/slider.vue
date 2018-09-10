@@ -44,8 +44,19 @@ export default {
 </script>
 
 <style>
+
+.carousel-control-prev{
+
+    margin-top: 10%;
+}
+
+
+.carousel-control-next{
+
+  margin-top: 10%;
+}
 .slider{
-  
+
   height: 545px;
 
 }
@@ -54,6 +65,51 @@ export default {
   padding-top: 105px;
   width: 100%;
   height: 545px;
+
+}
+
+
+@media (max-width: 992px){
+
+
+  .slider{
+    height: 400px;
+
+
+  }
+  .imm{
+    height: 400px;
+
+
+    }
+
+
+}
+
+/* responsive */
+@media (max-width: 576px){
+  .slider{
+    height: 380px;
+
+
+  }
+  .imm{
+    height: 380px;
+    padding-top: 190px;
+
+    }
+
+    .carousel-control-prev{
+
+    margin-top: 38%;
+}
+
+
+.carousel-control-next{
+
+  margin-top: 38%;
+}
+
 
 }
 

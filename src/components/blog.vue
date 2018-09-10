@@ -145,7 +145,7 @@ export default {
 
   getArticles(){
 
-     this.$http.get('https://frozen-atoll-57034.herokuapp.com//blog/get').then(function(data){
+     this.$http.get('https://frozen-atoll-57034.herokuapp.com/blog/get').then(function(data){
 
       this.posts = data.body;
       this.posts = this.posts.slice().reverse().slice(0,20);

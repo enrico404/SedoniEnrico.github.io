@@ -90,7 +90,7 @@ export default {
 
       if(this.user != '' && this.psw != ''){
 
-        this.$http.post('http://localhost:3000/login',{
+        this.$http.post('https://frozen-atoll-57034.herokuapp.com/login',{
 
           user: this.user
 

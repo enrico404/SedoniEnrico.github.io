@@ -26,16 +26,16 @@
     </div>
 
      <div class="log" v-show="this.showFlag">
-    <form>
+    
       <p>Username: </p>
-      <input type="text" ref="user" />
+      <input type="text" ref="user" v-model="user"/>
       <br><br>
       <p>Password: </p>
-      <input type="password" ref="password" />
+      <input type="password" ref="password" v-model="psw"/>
       <br><br>
       <button class="btn btn-primary cancelB" v-on:click="showForm">Cancel</button>
       <button class="btn btn-primary loginB" v-on:click="loginF">Login</button>
-    </form>
+  
 
   </div>
 
@@ -85,8 +85,8 @@ export default {
 
     loginF(){
 
-      this.user = this.$refs.user.value;
-      this.psw = this.$refs.password.value;
+     // this.user = this.$refs.user.value;
+      //this.psw = this.$refs.password.value;
 
       if(this.user != '' && this.psw != ''){
 

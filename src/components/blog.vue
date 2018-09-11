@@ -343,5 +343,15 @@ input{
 
 }
 
+@media (max-width: 576px){
+
+  .card-img-top{
+
+      width: 300px;
+      height: 140px
+  }
+
+}
+
 
 </style>

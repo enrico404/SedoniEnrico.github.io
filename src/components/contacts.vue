@@ -106,7 +106,7 @@ p, span {
     margin-left: 0px;
     border-radius: 0px;
     margin-top: 300px;
-    height: 480px;
+    height: 500px;
 
   }
 

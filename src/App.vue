@@ -1,6 +1,8 @@
 <template>
   <div id="app" class="body">
 
+
+    
         <keep-alive>
             <MyHeader></MyHeader>
         </keep-alive>
@@ -17,12 +19,14 @@
 <script>
 import Header from './components/header'
 import Footer from './components/footer'
-
+import Blog from './components/blog'
+import Vue from 'vue'
 
 export default {
   name: 'app',
 
   components:{
+    'blog':Blog,
     'MyHeader': Header,
     'MyFooter': Footer
   },
@@ -37,8 +41,9 @@ export default {
     
 
     },
-  
-
+    created(){
+      Vue.prototype.$logged = false;
+    }
  
 }
 </script>

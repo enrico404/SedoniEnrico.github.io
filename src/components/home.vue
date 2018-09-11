@@ -101,7 +101,7 @@ export default {
     margin-left: 0px;
     border-radius: 0px;
     margin-top: 300px;
-    height: 550px;
+    height: 565px;
 
 
    }

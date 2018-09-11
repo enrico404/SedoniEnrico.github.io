@@ -9,7 +9,7 @@
       <div class="subtitle" >
       <h2 style="padding-left:15px; margin-top:-10px;">Blog</h2>
 
-            <button id="buttonCreate" class="btn btn-primary" style="margin-left:35px" v-on:click="showDiv">
+            <button id="buttonCreate" class="btn btn-primary" style="margin-left:35px" v-on:click="showDiv" >
                 Create a new post
             </button>
       </div>
@@ -50,6 +50,7 @@
 import Slider from './slider'
 import EventBus from '../event_bus.js'
 import Anag from './anag'
+import Vue from 'vue'
 
 
 export default {
@@ -77,6 +78,7 @@ export default {
         posts: [],
         showFlag: false,
         logged: false
+        
 
 
     }
@@ -159,19 +161,26 @@ export default {
   created(){
 
     this.getArticles();
+     EventBus.$on('LOG_SUCCESS', function(){
+      this.logged = true;
+    
+      document.getElementById('buttonCreate').style.display = 'block';
+      console.log("mostro il bottone");
 
+    });
 
 
   },
 
   mounted(){
 
-    EventBus.$on('LOG_SUCCESS', function(){
-      this.logged = true;
-      console.log("Cambio proprietà bottone..");
-      document.getElementById('buttonCreate').style.display ="block";
+     
+    if(Vue.prototype.$logged == true){
 
-    });
+
+        document.getElementById('buttonCreate').style.display = 'block';
+        console.log("mostro il bottone");
+    }
 
 
   },
@@ -317,8 +326,9 @@ input{
   background-color: white;
   z-index: 1;
   position: fixed;
-  top: 10%;
-  left: 33%;
+  top: 12%;
+  width: 60vw;
+  left: 20%;
   animation-name: entrance;
   animation-duration:0.1s;
   animation-timing-function: linear;
@@ -349,6 +359,12 @@ input{
 
       width: 300px;
       height: 140px
+  }
+  .inputPost{
+    left: 0%;
+    width: 100vw;
+    top: 5%;
+
   }
 
 }

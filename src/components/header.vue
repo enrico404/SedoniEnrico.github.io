@@ -49,6 +49,7 @@
 
 
 import EventBus from '../event_bus.js'
+import Vue from 'vue'
 export default {
 
 
@@ -61,6 +62,7 @@ export default {
       psw: '',
       account: [],
       login: 'Login'
+   
     }
   },
 
@@ -104,6 +106,8 @@ export default {
             this.login ="Sei loggato come: "+ this.user;
             this.showFlag = !this.showFlag;
             EventBus.$emit('LOG_SUCCESS');
+           // variabile globale nella istanza vue
+            Vue.prototype.$logged = true;
 
 
           }else alert("cedenziali errate, riprova!");
@@ -120,12 +124,12 @@ export default {
 
   created () {
     document.addEventListener('scroll', this.handleScroll);
+     
 
   },
   destroyed () {
     document.removeEventListener('scroll', this.handleScroll);
   }
-
 
 
 }
@@ -281,6 +285,10 @@ ul{
 
   }
 
+.log{
+  left: 18%;
+
+}
 
 }
 

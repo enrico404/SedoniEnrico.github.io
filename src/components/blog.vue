@@ -76,8 +76,9 @@ export default {
 
         },
         posts: [],
-        showFlag: false,
-        logged: false
+        showFlag: false
+        
+        
         
 
 
@@ -161,29 +162,39 @@ export default {
   created(){
 
     this.getArticles();
-     EventBus.$on('LOG_SUCCESS', function(){
-      this.logged = true;
-    
-      document.getElementById('buttonCreate').style.display = 'block';
-      console.log("mostro il bottone");
-
-    });
+     
 
 
   },
 
   mounted(){
 
-     
+  
+    
     if(Vue.prototype.$logged == true){
 
 
         document.getElementById('buttonCreate').style.display = 'block';
-        console.log("mostro il bottone");
+      
+    }else{
+
+      EventBus.$on("LOG_SUCCESS", function(){
+
+        try {
+           document.getElementById('buttonCreate').style.display = 'block';
+          
+        } catch (error) {
+          console.log("bottone non definito");
+        }
+       
+      });
+
     }
 
 
+
   },
+  
 
   filters:{
     toUpperString(data){

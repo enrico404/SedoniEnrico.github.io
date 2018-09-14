@@ -52,7 +52,7 @@ export default {
   margin-top: 140px;
   margin-left: 100px;
   width: 58%;
-  height: 420px;
+  height: 460px;
   background-color: #3498db;
   opacity: 0;
   animation-name: entry;

@@ -108,6 +108,7 @@ export default {
             EventBus.$emit('LOG_SUCCESS');
            // variabile globale nella istanza vue
             Vue.prototype.$logged = true;
+           
 
 
           }else alert("cedenziali errate, riprova!");

@@ -28,10 +28,10 @@
      <div class="log" v-show="this.showFlag">
     
       <p>Username: </p>
-      <input type="text" ref="user" v-model="user"/>
+      <input type="text" ref="user" v-model="user" v-on:keyup.enter="validate"/>
       <br><br>
       <p>Password: </p>
-      <input type="password" ref="password" v-model="psw"/>
+      <input type="password" ref="password" v-model="psw" v-on:keyup.enter="validate"/>
       <br><br>
       <button class="btn btn-primary cancelB" v-on:click="showForm">Cancel</button>
       <button class="btn btn-primary loginB" v-on:click="loginF">Login</button>
@@ -117,6 +117,12 @@ export default {
 
       }else alert("Devi inserire lo username e la password!");
 
+    },
+
+    validate(){
+
+      this.loginF();
+        
     }
 
 
@@ -236,12 +242,14 @@ input{
 }
 .loginB{
   float: right;
+  margin-right: 20px;
 }
 
 
 .cancelB{
 
   float:left;
+  margin-left: 0px;
 }
 
 .log{
@@ -262,6 +270,19 @@ ul{
 
 .nb{
   padding-bottom: 60px;
+}
+
+input{
+
+  border: none;
+  border-bottom: 1px solid #3498db;
+  transition:.4s;
+}
+
+input:focus{
+  outline: none;
+  background-color: #ecf0f1;
+  
 }
 
 /* responsive */

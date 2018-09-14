@@ -11688,6 +11688,11 @@ var Component = normalizeComponent(
           } else alert("cedenziali errate, riprova!");
         });
       } else alert("Devi inserire lo username e la password!");
+    },
+
+    validate() {
+
+      this.loginF();
     }
 
   },
@@ -12737,7 +12742,7 @@ module.exports = function listToStyles (parentId, list) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_header_vue__ = __webpack_require__(8);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_60e30db2_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4bfaac6c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__ = __webpack_require__(28);
 function injectStyle (ssrContext) {
   __webpack_require__(26)
 }
@@ -12752,12 +12757,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-60e30db2"
+var __vue_scopeId__ = "data-v-4bfaac6c"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_header_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_60e30db2_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4bfaac6c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -12778,7 +12783,7 @@ var content = __webpack_require__(27);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("a69afe62", content, true, {});
+var update = __webpack_require__(1)("931e024a", content, true, {});
 
 /***/ }),
 /* 27 */
@@ -12789,7 +12794,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, ".nb>.btn[data-v-60e30db2]{margin-top:15px;position:fixed;background-color:transparent;font-weight:700;border-radius:10px;text-decoration:underline;left:0}.nb>.btn[data-v-60e30db2]:hover{background-color:#43ae97;color:#fff}.router-link-exact-active>a[data-v-60e30db2]{background-color:#43ae97;border-radius:10px;color:#fff;animation-name:selectedMenu-data-v-60e30db2;animation-duration:.28s;animation-timing-function:linear}@keyframes selectedMenu-data-v-60e30db2{0%{transform:scale(0)}50%{transform:scale(1)}80%{transform:scale(.9)}to{transform:scale(1)}}a[data-v-60e30db2]{color:#000;font-weight:700;font-size:11.5pt;text-decoration:none}a[data-v-60e30db2]:hover{color:#95a5a6;transition:.1s ease-in}.HeadGroup[data-v-60e30db2]{position:fixed;z-index:1;width:100%}.title[data-v-60e30db2]{width:100%;background-color:#2980b9;margin:5x 5px;padding-top:5px;padding-bottom:5px}.name[data-v-60e30db2]{font-size:40px;text-align:center;color:#fff;font-family:Arial,Helvetica,sans-serif}.nb[data-v-60e30db2]{width:100%;background-color:#fff;opacity:.99;padding-bottom:10px}.nav-item[data-v-60e30db2]{padding-top:10px;height:50px;padding-bottom:10px}input[data-v-60e30db2]{width:90%}.loginB[data-v-60e30db2]{float:right}.cancelB[data-v-60e30db2]{float:left}.log[data-v-60e30db2]{position:fixed;background-color:#fff;border:1px solid gray;left:33%;top:20%;border-radius:10px;padding:20px;width:300px}ul[data-v-60e30db2]{float:right}.nb[data-v-60e30db2]{padding-bottom:60px}@media (max-width:576px){.nb>ul[data-v-60e30db2]{float:left;padding-top:45px}.nb[data-v-60e30db2]{padding-bottom:110px}.nb>.btn[data-v-60e30db2]{float:left;left:-18px}.log[data-v-60e30db2]{left:18%}}", ""]);
+exports.push([module.i, ".nb>.btn[data-v-4bfaac6c]{margin-top:15px;position:fixed;background-color:transparent;font-weight:700;border-radius:10px;text-decoration:underline;left:0}.nb>.btn[data-v-4bfaac6c]:hover{background-color:#43ae97;color:#fff}.router-link-exact-active>a[data-v-4bfaac6c]{background-color:#43ae97;border-radius:10px;color:#fff;animation-name:selectedMenu-data-v-4bfaac6c;animation-duration:.28s;animation-timing-function:linear}@keyframes selectedMenu-data-v-4bfaac6c{0%{transform:scale(0)}50%{transform:scale(1)}80%{transform:scale(.9)}to{transform:scale(1)}}a[data-v-4bfaac6c]{color:#000;font-weight:700;font-size:11.5pt;text-decoration:none}a[data-v-4bfaac6c]:hover{color:#95a5a6;transition:.1s ease-in}.HeadGroup[data-v-4bfaac6c]{position:fixed;z-index:1;width:100%}.title[data-v-4bfaac6c]{width:100%;background-color:#2980b9;margin:5x 5px;padding-top:5px;padding-bottom:5px}.name[data-v-4bfaac6c]{font-size:40px;text-align:center;color:#fff;font-family:Arial,Helvetica,sans-serif}.nb[data-v-4bfaac6c]{width:100%;background-color:#fff;opacity:.99;padding-bottom:10px}.nav-item[data-v-4bfaac6c]{padding-top:10px;height:50px;padding-bottom:10px}input[data-v-4bfaac6c]{width:90%}.loginB[data-v-4bfaac6c]{float:right;margin-right:20px}.cancelB[data-v-4bfaac6c]{float:left;margin-left:0}.log[data-v-4bfaac6c]{position:fixed;background-color:#fff;border:1px solid gray;left:33%;top:20%;border-radius:10px;padding:20px;width:300px}ul[data-v-4bfaac6c]{float:right}.nb[data-v-4bfaac6c]{padding-bottom:60px}input[data-v-4bfaac6c]{border:none;border-bottom:1px solid #3498db;transition:.4s}input[data-v-4bfaac6c]:focus{outline:none;background-color:#ecf0f1}@media (max-width:576px){.nb>ul[data-v-4bfaac6c]{float:left;padding-top:45px}.nb[data-v-4bfaac6c]{padding-bottom:110px}.nb>.btn[data-v-4bfaac6c]{float:left;left:-18px}.log[data-v-4bfaac6c]{left:18%}}", ""]);
 
 // exports
 
@@ -12799,7 +12804,7 @@ exports.push([module.i, ".nb>.btn[data-v-60e30db2]{margin-top:15px;position:fixe
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"HeadGroup"},[_c('div',{staticClass:"title"},[_c('p',{staticClass:"name",attrs:{"id":"nome"}},[_vm._v(_vm._s(_vm.name))])]),_vm._v(" "),_c('div',{staticClass:"nb"},[_c('ul',{staticClass:"nav "},[_c('li',{staticClass:"nav-item"},[_c('router-link',{attrs:{"to":"./"}},[_c('a',{staticClass:"nav-link active"},[_vm._v("Home")])])],1),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('router-link',{attrs:{"to":"./blog"}},[_c('a',{staticClass:"nav-link"},[_vm._v("Blog")])])],1),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('router-link',{attrs:{"to":"./contacts"}},[_c('a',{staticClass:"nav-link"},[_vm._v("Contacts")])])],1)]),_vm._v(" "),_c('button',{staticClass:"btn",on:{"click":_vm.showForm}},[_vm._v(_vm._s(_vm.login))])]),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(this.showFlag),expression:"this.showFlag"}],staticClass:"log"},[_c('p',[_vm._v("Username: ")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.user),expression:"user"}],ref:"user",attrs:{"type":"text"},domProps:{"value":(_vm.user)},on:{"input":function($event){if($event.target.composing){ return; }_vm.user=$event.target.value}}}),_vm._v(" "),_c('br'),_c('br'),_vm._v(" "),_c('p',[_vm._v("Password: ")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.psw),expression:"psw"}],ref:"password",attrs:{"type":"password"},domProps:{"value":(_vm.psw)},on:{"input":function($event){if($event.target.composing){ return; }_vm.psw=$event.target.value}}}),_vm._v(" "),_c('br'),_c('br'),_vm._v(" "),_c('button',{staticClass:"btn btn-primary cancelB",on:{"click":_vm.showForm}},[_vm._v("Cancel")]),_vm._v(" "),_c('button',{staticClass:"btn btn-primary loginB",on:{"click":_vm.loginF}},[_vm._v("Login")])])])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"HeadGroup"},[_c('div',{staticClass:"title"},[_c('p',{staticClass:"name",attrs:{"id":"nome"}},[_vm._v(_vm._s(_vm.name))])]),_vm._v(" "),_c('div',{staticClass:"nb"},[_c('ul',{staticClass:"nav "},[_c('li',{staticClass:"nav-item"},[_c('router-link',{attrs:{"to":"./"}},[_c('a',{staticClass:"nav-link active"},[_vm._v("Home")])])],1),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('router-link',{attrs:{"to":"./blog"}},[_c('a',{staticClass:"nav-link"},[_vm._v("Blog")])])],1),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('router-link',{attrs:{"to":"./contacts"}},[_c('a',{staticClass:"nav-link"},[_vm._v("Contacts")])])],1)]),_vm._v(" "),_c('button',{staticClass:"btn",on:{"click":_vm.showForm}},[_vm._v(_vm._s(_vm.login))])]),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(this.showFlag),expression:"this.showFlag"}],staticClass:"log"},[_c('p',[_vm._v("Username: ")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.user),expression:"user"}],ref:"user",attrs:{"type":"text"},domProps:{"value":(_vm.user)},on:{"keyup":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.validate($event)},"input":function($event){if($event.target.composing){ return; }_vm.user=$event.target.value}}}),_vm._v(" "),_c('br'),_c('br'),_vm._v(" "),_c('p',[_vm._v("Password: ")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.psw),expression:"psw"}],ref:"password",attrs:{"type":"password"},domProps:{"value":(_vm.psw)},on:{"keyup":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.validate($event)},"input":function($event){if($event.target.composing){ return; }_vm.psw=$event.target.value}}}),_vm._v(" "),_c('br'),_c('br'),_vm._v(" "),_c('button',{staticClass:"btn btn-primary cancelB",on:{"click":_vm.showForm}},[_vm._v("Cancel")]),_vm._v(" "),_c('button',{staticClass:"btn btn-primary loginB",on:{"click":_vm.loginF}},[_vm._v("Login")])])])}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

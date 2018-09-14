@@ -18,7 +18,7 @@
               </a>
             </div>
       <div class="cv">
-        <img src="src/assets/CV.png" width="60" height="60"/>
+        <img style="cursor:pointer" src="src/assets/CV.png" width="60" height="60" onclick="window.open('https://drive.google.com/open?id=1bVHieS-BTC9oAuuliw7WWBJFjmHJ0Fo7')"/>
         <button type="button" class="btn btn-primary" onclick="window.open('https://drive.google.com/open?id=1bVHieS-BTC9oAuuliw7WWBJFjmHJ0Fo7')">Download my CV</button>
       </div>
     </div>

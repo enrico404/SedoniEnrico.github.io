@@ -24,7 +24,7 @@
                 <p class="titolo">Titolo:</p>
                 <input type="text" name="testo" v-model="post.titolo"/>
                 <p class="titolo">Descrizione:</p>
-                <textarea name="descr" id="descr" cols="30" rows="10" v-model="post.descr"></textarea>
+                <textarea name="descr" id="descr" cols="30" rows="10" v-model="post.descr"></textarea><br>
                 <label class="btn btn-primary mb-4 mt-4">
                   Choose an image
                   <input type="file" style="position: fixed; top: -100em" id="image" />
@@ -338,7 +338,7 @@ input{
   z-index: 1;
   position: fixed;
   top: 12%;
-  width: 60vw;
+  width: 50vw;
   left: 20%;
   animation-name: entrance;
   animation-duration:0.1s;
@@ -361,6 +361,13 @@ input{
 
   }
 
+.inputPost{
+    left: 0%;
+    width: 100vw;
+    top: 5%;
+    
+
+  }
 
 }
 

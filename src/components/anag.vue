@@ -19,7 +19,7 @@
             </div>
       <div class="cv">
         <img src="src/assets/CV.png" width="60" height="60"/>
-        <button type="button" class="btn btn-primary" onclick="window.open('https://drive.google.com/open?id=1lksqHTVCJfjen2vZDKH1GKQ92L90EVAW')">Download my CV</button>
+        <button type="button" class="btn btn-primary" onclick="window.open('https://drive.google.com/open?id=1bVHieS-BTC9oAuuliw7WWBJFjmHJ0Fo7')">Download my CV</button>
       </div>
     </div>
      <div class=" dataAnag shadow bg-white">

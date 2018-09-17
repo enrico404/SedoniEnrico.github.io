@@ -6,17 +6,17 @@
     <div class="nb">
       <ul class="nav ">
         <li class="nav-item">
-          <router-link to='./'>
+          <router-link to='/'>
             <a class="nav-link active" >Home</a>
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link to='./blog'>
+          <router-link to='/blog'>
              <a class="nav-link">Blog</a>
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link to='./contacts'>
+          <router-link to='/contacts'>
             <a class="nav-link">Contacts</a>
           </router-link>
         </li>

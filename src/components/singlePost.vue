@@ -1,0 +1,103 @@
+<template>
+  <div>
+
+       <div class="card articolo" v-for="post in filteredPosts" :key="post.titolo" >
+        <img class="card-img-top" v-bind:src="'src/assets/'+ post.img" alt="card image" />
+        <br>
+        <router-link v-bind:to="'/blog/'+post.titolo"><h4 class="titoloArt card-title">{{ post.titolo | toUpperString}}</h4></router-link>
+        <p class="artData card-text">{{ post.data.slice(0,10) }}</p>
+        <p class="card-text">{{ post.descr }}</p>
+        <br>
+      </div>
+    <article class="card art">
+        <img class="card-img-top" v-bind:src="'src/assets/'+post[0].img" alt="card img" />
+
+        <p id="tit">{{ post[0].titolo.toUpperCase()  }}</p>
+        <p id="par">{{ post[0].descr }}</p>
+    </article>
+  </div>
+</template>
+
+<script>
+
+
+import Vue from 'vue'
+export default {
+
+
+  components:{
+  
+  },
+
+  data () {
+    return {
+        titolo: this.$route.params.titolo,
+        post:{}
+    }
+  },
+    methods: {
+
+    
+
+    },
+    created(){
+      /* ho dovuto usare una post request perchè altrimenti non mi passava l'oggetto*/ 
+      this.$http.post('https://frozen-atoll-57034.herokuapp.com/singlePost', {
+              titolo: this.titolo,
+             
+
+
+            }).then(function(data){
+            this.post = data.body.rows;
+           
+        });
+      
+    }
+ 
+}
+</script>
+
+<style scoped>
+.card-img-top{
+  width: 400px;
+  height: 180px;
+
+}
+.art{
+
+    width: 60%;
+    padding-top: 200px;
+    background-color: transparent;
+    border: none;
+    margin-left: 50px;
+    }
+
+#tit{
+    font-size: 26pt;
+    font-weight: bold;
+    margin-top: 50px;
+    border-bottom: 1px solid gray;
+}
+
+
+@media (max-width: 576px){
+
+  .art{
+     padding-top: 250px;
+     width: 80%;
+  }
+  #tit{
+      font-size: 22pt;
+  }
+  
+  .card-img-top{
+
+      width: 300px;
+      height: 140px
+  }
+  
+
+}
+
+
+</style>

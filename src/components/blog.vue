@@ -9,6 +9,8 @@
       <div class="subtitle" >
       <h2 style="padding-left:15px; margin-top:-10px;">Blog</h2>
 
+            
+            <input class="inputSearch" type="text" v-model="search" placeholder="search an article"/>
             <button id="buttonCreate" class="btn btn-primary" style="margin-left:35px" v-on:click="showDiv" >
                 Create a new post
             </button>
@@ -31,10 +33,10 @@
                 </label>
             </div>
 
-      <div class="card articolo" v-for="post in posts" :key="post.titolo" >
+      <div class="card articolo" v-for="post in filteredPosts" :key="post.titolo" >
         <img class="card-img-top" v-bind:src="'src/assets/'+ post.img" alt="card image" />
         <br>
-        <h4 class="titoloArt card-title">{{ post.titolo | toUpperString}}</h4>
+        <router-link style="text-decoration:none" v-bind:to="'/blog/'+post.titolo"><h4 class="titoloArt card-title">{{ post.titolo | toUpperString}}</h4></router-link>
         <p class="artData card-text">{{ post.data.slice(0,10) }}</p>
         <p class="card-text">{{ post.descr }}</p>
         <br>
@@ -73,11 +75,12 @@ export default {
           descr:'',
           data: '',
           img: ''
+         
 
         },
         posts: [],
-        showFlag: false
-        
+        showFlag: false,
+        search:''
         
         
 
@@ -115,10 +118,10 @@ export default {
         }
 
 
-
+        
         if(this.post.titolo != '' && this.post.descr != '' ) {
             this.$http.post('https://frozen-atoll-57034.herokuapp.com/blog/post', {
-              titolo: this.post.titolo,
+              titolo: this.post.titolo.toLowerCase(),
               descr: this.post.descr,
               data: this.post.data,
               img: this.post.img
@@ -144,7 +147,6 @@ export default {
         else alert("inserire titolo e descrizione del post");
 
     },
-
 
   getArticles(){
 
@@ -203,7 +205,20 @@ export default {
     }
 
 
-  }
+  },
+
+  computed:{
+
+    filteredPosts:function(){
+
+      return this.posts.filter((post) => {
+
+        return post.titolo.match(this.search);
+      });
+
+    }
+
+  },
 
 
 }
@@ -211,6 +226,25 @@ export default {
 
 <style>
 
+
+
+
+.inputSearch{
+  border: none;
+  border-bottom: 1.2px solid #3498db;
+  background-color: #ecf0f1;
+  outline: none;
+  width: 45%;
+  margin-left: 35px;
+  margin-bottom: 40px;
+  height: 30px;
+  transition: .3s ease-in;
+}
+
+.inputSearch:focus{
+  background-color: #c2c5c7;
+
+}
 #buttonCreate{
   display: none;
 
@@ -366,6 +400,11 @@ input{
     width: 100vw;
     top: 5%;
     
+
+  }
+  .inputSearch{
+
+    width: 70%;
 
   }
 

@@ -213,7 +213,7 @@ export default {
 
       return this.posts.filter((post) => {
 
-        return post.titolo.match(this.search);
+        return post.titolo.match(this.search.toLowerCase());
       });
 
     }

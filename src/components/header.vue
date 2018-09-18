@@ -177,6 +177,11 @@ export default {
 
 }
 
+.router-link-exact-active > a:hover{
+
+  color: white;
+}
+
 
 
 
@@ -197,11 +202,12 @@ a{
 }
 
 a:hover{
-  color:#95a5a6;
+ 
   transition: 0.1s ease-in;
 
 
 }
+
 
 .HeadGroup{
   position: fixed;

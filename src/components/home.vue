@@ -1,21 +1,26 @@
 <template>
+<span v-touch:swipe.left="swipeHandlerLeft">
 <div>
     <slider></slider>
-    <anag></anag>
+    
+      <anag></anag>
 
-    <div class="about ">
-        <p class="textAbout">About me..</p>
-        <p class="text1">Benvenuto! Mi chiamo Sedoni Enrico ed ho 21 anni. Sono un ragazzo con la passione per l'informatica e la programmazione.
-         Attualmente sto frequentando un corso di laurea in informatica presso l'università di Modena e Reggio Emilia (UNIMORE).
-        Sono al terzo anno, quindi valuto offerte di lavoro sia part-time che full-time.<br><br>
-        Questo è un sito realizzato interamente da me e verrà utlizzato come portfolio dei miei progetti personali.</p>
-        <div class="aboutImm">
-          <img src="src/assets/about1.png" width="180" height="145"  />
-        </div>
-    </div>
+      <div class="about ">
+          <p class="textAbout">About me..</p>
+          <p class="text1">Benvenuto! Mi chiamo Sedoni Enrico ed ho 21 anni. Sono un ragazzo con la passione per l'informatica e la programmazione.
+          Attualmente sto frequentando un corso di laurea in informatica presso l'università di Modena e Reggio Emilia (UNIMORE).
+          Sono al terzo anno, quindi valuto offerte di lavoro sia part-time che full-time.<br><br>
+          Questo è un sito realizzato interamente da me e verrà utlizzato come portfolio dei miei progetti personali.</p>
+          <div class="aboutImm">
+            <img src="src/assets/about1.png" width="180" height="145"  />
+          </div>
 
+        
+      </div>
 
+    
 </div>
+</span>
 </template>
 
 <script>
@@ -37,6 +42,15 @@ export default {
     return {
 
 
+
+    }
+  },
+  methods:{
+
+    swipeHandlerLeft(){
+
+      
+      this.$router.push('/blog');
 
     }
   }

@@ -1,4 +1,5 @@
 <template>
+<span v-touch:swipe.left="swipeHandlerLeft" v-touch:swipe.right="swipeHandlerRight">
 <div>
 
     <slider></slider>
@@ -45,6 +46,8 @@
 
 
 </div>
+</span>
+
 </template>
 
 <script>
@@ -91,7 +94,18 @@ export default {
 
   methods:{
 
+    swipeHandlerLeft(){
 
+      
+      this.$router.push('/contacts');
+
+    },
+    swipeHandlerRight(){
+
+      
+      this.$router.push('/');
+
+    },
 
     showDiv(){
 

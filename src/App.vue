@@ -21,6 +21,8 @@ import Footer from './components/footer'
 import Blog from './components/blog'
 import Vue from 'vue'
 
+
+
 export default {
   name: 'app',
 

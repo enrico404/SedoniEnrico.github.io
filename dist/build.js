@@ -11747,7 +11747,7 @@ const EventBus = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]();
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_blog_vue__ = __webpack_require__(12);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_96c6e5d4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_blog_vue__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0cae5f3a_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_blog_vue__ = __webpack_require__(42);
 function injectStyle (ssrContext) {
   __webpack_require__(34)
 }
@@ -11767,7 +11767,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_blog_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_96c6e5d4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_blog_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0cae5f3a_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_blog_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -11786,6 +11786,9 @@ var Component = normalizeComponent(
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__event_bus_js__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__anag__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue__ = __webpack_require__(3);
+//
+//
+//
 //
 //
 //
@@ -11870,6 +11873,15 @@ var Component = normalizeComponent(
   },
 
   methods: {
+
+    swipeHandlerLeft() {
+
+      this.$router.push('/contacts');
+    },
+    swipeHandlerRight() {
+
+      this.$router.push('/');
+    },
 
     showDiv() {
 
@@ -11960,7 +11972,7 @@ var Component = normalizeComponent(
 
       return this.posts.filter(post => {
 
-        return post.titolo.match(this.search);
+        return post.titolo.match(this.search.toLowerCase());
       });
     }
 
@@ -12092,6 +12104,11 @@ var Component = normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -12106,6 +12123,13 @@ var Component = normalizeComponent(
 
   data() {
     return {};
+  },
+  methods: {
+
+    swipeHandlerLeft() {
+
+      this.$router.push('/blog');
+    }
   }
 });
 
@@ -12116,6 +12140,8 @@ var Component = normalizeComponent(
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__slider__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__anag__ = __webpack_require__(6);
+//
+//
 //
 //
 //
@@ -12166,6 +12192,14 @@ var Component = normalizeComponent(
       mail: 'sedoni.enrico@gmail.com'
 
     };
+  },
+  methods: {
+
+    swipeHandlerRight() {
+
+      this.$router.push('/blog');
+    }
+
   }
 });
 
@@ -12232,11 +12266,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_router__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_resource__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue2_touch_events__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue2_touch_events___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_vue2_touch_events__);
 
 
 
 
 
+
+
+__WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_5_vue2_touch_events___default.a);
 
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_4_vue_resource__["a" /* default */]);
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_2_vue_router__["a" /* default */]);
@@ -12713,7 +12752,7 @@ process.umask = function() { return 0; };
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(7);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_dab26978_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5b3c0df8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(43);
 function injectStyle (ssrContext) {
   __webpack_require__(23)
 }
@@ -12733,7 +12772,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_dab26978_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5b3c0df8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -12754,7 +12793,7 @@ var content = __webpack_require__(24);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("c7bf413e", content, true, {});
+var update = __webpack_require__(1)("878fbc22", content, true, {});
 
 /***/ }),
 /* 24 */
@@ -12810,7 +12849,7 @@ module.exports = function listToStyles (parentId, list) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_header_vue__ = __webpack_require__(8);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_10c50034_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5c4f7fba_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__ = __webpack_require__(29);
 function injectStyle (ssrContext) {
   __webpack_require__(27)
 }
@@ -12825,12 +12864,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-10c50034"
+var __vue_scopeId__ = "data-v-5c4f7fba"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_header_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_10c50034_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5c4f7fba_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -12851,7 +12890,7 @@ var content = __webpack_require__(28);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("6c8b9055", content, true, {});
+var update = __webpack_require__(1)("51a98971", content, true, {});
 
 /***/ }),
 /* 28 */
@@ -12862,7 +12901,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, ".nb>.btn[data-v-10c50034]{margin-top:15px;position:fixed;background-color:transparent;font-weight:700;border-radius:10px;text-decoration:underline;left:0}.nb>.btn[data-v-10c50034]:hover{background-color:#43ae97;color:#fff}.router-link-exact-active>a[data-v-10c50034]{background-color:#43ae97;border-radius:10px;color:#fff;animation-name:selectedMenu-data-v-10c50034;animation-duration:.28s;animation-timing-function:linear}@keyframes selectedMenu-data-v-10c50034{0%{transform:scale(0)}50%{transform:scale(1)}80%{transform:scale(.9)}to{transform:scale(1)}}a[data-v-10c50034]{color:#000;font-weight:700;font-size:11.5pt;text-decoration:none}a[data-v-10c50034]:hover{color:#95a5a6;transition:.1s ease-in}.HeadGroup[data-v-10c50034]{position:fixed;z-index:1;width:100%}.title[data-v-10c50034]{width:100%;background-color:#2980b9;margin:5x 5px;padding-top:5px;padding-bottom:5px}.name[data-v-10c50034]{font-size:40px;text-align:center;color:#fff;font-family:Arial,Helvetica,sans-serif}.nb[data-v-10c50034]{width:100%;background-color:#fff;opacity:.99;padding-bottom:10px}.nav-item[data-v-10c50034]{padding-top:10px;height:50px;padding-bottom:10px}input[data-v-10c50034]{width:90%}.loginB[data-v-10c50034]{float:right;margin-right:20px}.cancelB[data-v-10c50034]{float:left;margin-left:0}.log[data-v-10c50034]{position:fixed;background-color:#fff;border:1px solid gray;left:33%;top:20%;border-radius:10px;padding:20px;width:300px}ul[data-v-10c50034]{float:right}.nb[data-v-10c50034]{padding-bottom:60px}input[data-v-10c50034]{border:none;border-bottom:1px solid #3498db;transition:.4s}input[data-v-10c50034]:focus{outline:none;background-color:#ecf0f1}@media (max-width:576px){.nb>ul[data-v-10c50034]{float:left;padding-top:45px}.nb[data-v-10c50034]{padding-bottom:110px}.nb>.btn[data-v-10c50034]{float:left;left:-18px}.log[data-v-10c50034]{left:18%}}", ""]);
+exports.push([module.i, ".nb>.btn[data-v-5c4f7fba]{margin-top:15px;position:fixed;background-color:transparent;font-weight:700;border-radius:10px;text-decoration:underline;left:0}.nb>.btn[data-v-5c4f7fba]:hover{background-color:#43ae97;color:#fff}.router-link-exact-active>a[data-v-5c4f7fba]{background-color:#43ae97;border-radius:10px;color:#fff;animation-name:selectedMenu-data-v-5c4f7fba;animation-duration:.28s;animation-timing-function:linear}@keyframes selectedMenu-data-v-5c4f7fba{0%{transform:scale(0)}50%{transform:scale(1)}80%{transform:scale(.9)}to{transform:scale(1)}}a[data-v-5c4f7fba]{color:#000;font-weight:700;font-size:11.5pt;text-decoration:none}a[data-v-5c4f7fba]:hover{color:#95a5a6;transition:.1s ease-in}.HeadGroup[data-v-5c4f7fba]{position:fixed;z-index:1;width:100%}.title[data-v-5c4f7fba]{width:100%;background-color:#2980b9;margin:5x 5px;padding-top:5px;padding-bottom:5px}.name[data-v-5c4f7fba]{font-size:40px;text-align:center;color:#fff;font-family:Arial,Helvetica,sans-serif}.nb[data-v-5c4f7fba]{width:100%;background-color:#fff;opacity:.99;padding-bottom:10px}.nav-item[data-v-5c4f7fba]{padding-top:10px;height:50px;padding-bottom:10px}input[data-v-5c4f7fba]{width:90%}.loginB[data-v-5c4f7fba]{float:right;margin-right:20px}.cancelB[data-v-5c4f7fba]{float:left;margin-left:0}.log[data-v-5c4f7fba]{position:fixed;background-color:#fff;border:1px solid gray;left:33%;top:20%;border-radius:10px;padding:20px;width:300px}ul[data-v-5c4f7fba]{float:right}.nb[data-v-5c4f7fba]{padding-bottom:60px}input[data-v-5c4f7fba]{border:none;border-bottom:1px solid #3498db;transition:.4s}input[data-v-5c4f7fba]:focus{outline:none;background-color:#ecf0f1}@media (max-width:576px){.nb>ul[data-v-5c4f7fba]{float:left;padding-top:45px}.nb[data-v-5c4f7fba]{padding-bottom:110px}.nb>.btn[data-v-5c4f7fba]{float:left;left:-18px}.log[data-v-5c4f7fba]{left:18%}}", ""]);
 
 // exports
 
@@ -12962,7 +13001,7 @@ var content = __webpack_require__(35);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("5783d884", content, true, {});
+var update = __webpack_require__(1)("bb4607d0", content, true, {});
 
 /***/ }),
 /* 35 */
@@ -13057,7 +13096,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('slider'),_vm._v(" "),_c('anag'),_vm._v(" "),_c('div',{staticClass:"blog"},[_c('div',{staticClass:"subtitle"},[_c('h2',{staticStyle:{"padding-left":"15px","margin-top":"-10px"}},[_vm._v("Blog")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.search),expression:"search"}],staticClass:"inputSearch",attrs:{"type":"text","placeholder":"search an article"},domProps:{"value":(_vm.search)},on:{"input":function($event){if($event.target.composing){ return; }_vm.search=$event.target.value}}}),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",staticStyle:{"margin-left":"35px"},attrs:{"id":"buttonCreate"},on:{"click":_vm.showDiv}},[_vm._v("\n                Create a new post\n            ")])]),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(this.showFlag),expression:"this.showFlag"}],staticClass:"inputPost"},[_c('br'),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",on:{"click":_vm.showDiv}},[_vm._v("\n                  indietro\n                ")]),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",attrs:{"id":"crea"},on:{"click":_vm.posta}},[_vm._v("\n                  Crea\n                ")]),_vm._v(" "),_c('p',{staticClass:"titolo"},[_vm._v("Titolo:")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.post.titolo),expression:"post.titolo"}],attrs:{"type":"text","name":"testo"},domProps:{"value":(_vm.post.titolo)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.post, "titolo", $event.target.value)}}}),_vm._v(" "),_c('p',{staticClass:"titolo"},[_vm._v("Descrizione:")]),_vm._v(" "),_c('textarea',{directives:[{name:"model",rawName:"v-model",value:(_vm.post.descr),expression:"post.descr"}],attrs:{"name":"descr","id":"descr","cols":"30","rows":"10"},domProps:{"value":(_vm.post.descr)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.post, "descr", $event.target.value)}}}),_c('br'),_vm._v(" "),_vm._m(0)]),_vm._v(" "),_vm._l((_vm.filteredPosts),function(post){return _c('div',{key:post.titolo,staticClass:"card articolo"},[_c('img',{staticClass:"card-img-top",attrs:{"src":'src/assets/'+ post.img,"alt":"card image"}}),_vm._v(" "),_c('br'),_vm._v(" "),_c('router-link',{staticStyle:{"text-decoration":"none"},attrs:{"to":'/blog/'+post.titolo}},[_c('h4',{staticClass:"titoloArt card-title"},[_vm._v(_vm._s(_vm._f("toUpperString")(post.titolo)))])]),_vm._v(" "),_c('p',{staticClass:"artData card-text"},[_vm._v(_vm._s(post.data.slice(0,10)))]),_vm._v(" "),_c('p',{staticClass:"card-text"},[_vm._v(_vm._s(post.descr))]),_vm._v(" "),_c('br')],1)})],2)],1)}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{directives:[{name:"touch",rawName:"v-touch:swipe.left",value:(_vm.swipeHandlerLeft),expression:"swipeHandlerLeft",arg:"swipe",modifiers:{"left":true}},{name:"touch",rawName:"v-touch:swipe.right",value:(_vm.swipeHandlerRight),expression:"swipeHandlerRight",arg:"swipe",modifiers:{"right":true}}]},[_c('div',[_c('slider'),_vm._v(" "),_c('anag'),_vm._v(" "),_c('div',{staticClass:"blog"},[_c('div',{staticClass:"subtitle"},[_c('h2',{staticStyle:{"padding-left":"15px","margin-top":"-10px"}},[_vm._v("Blog")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.search),expression:"search"}],staticClass:"inputSearch",attrs:{"type":"text","placeholder":"search an article"},domProps:{"value":(_vm.search)},on:{"input":function($event){if($event.target.composing){ return; }_vm.search=$event.target.value}}}),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",staticStyle:{"margin-left":"35px"},attrs:{"id":"buttonCreate"},on:{"click":_vm.showDiv}},[_vm._v("\n                Create a new post\n            ")])]),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(this.showFlag),expression:"this.showFlag"}],staticClass:"inputPost"},[_c('br'),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",on:{"click":_vm.showDiv}},[_vm._v("\n                  indietro\n                ")]),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",attrs:{"id":"crea"},on:{"click":_vm.posta}},[_vm._v("\n                  Crea\n                ")]),_vm._v(" "),_c('p',{staticClass:"titolo"},[_vm._v("Titolo:")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.post.titolo),expression:"post.titolo"}],attrs:{"type":"text","name":"testo"},domProps:{"value":(_vm.post.titolo)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.post, "titolo", $event.target.value)}}}),_vm._v(" "),_c('p',{staticClass:"titolo"},[_vm._v("Descrizione:")]),_vm._v(" "),_c('textarea',{directives:[{name:"model",rawName:"v-model",value:(_vm.post.descr),expression:"post.descr"}],attrs:{"name":"descr","id":"descr","cols":"30","rows":"10"},domProps:{"value":(_vm.post.descr)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.post, "descr", $event.target.value)}}}),_c('br'),_vm._v(" "),_vm._m(0)]),_vm._v(" "),_vm._l((_vm.filteredPosts),function(post){return _c('div',{key:post.titolo,staticClass:"card articolo"},[_c('img',{staticClass:"card-img-top",attrs:{"src":'src/assets/'+ post.img,"alt":"card image"}}),_vm._v(" "),_c('br'),_vm._v(" "),_c('router-link',{staticStyle:{"text-decoration":"none"},attrs:{"to":'/blog/'+post.titolo}},[_c('h4',{staticClass:"titoloArt card-title"},[_vm._v(_vm._s(_vm._f("toUpperString")(post.titolo)))])]),_vm._v(" "),_c('p',{staticClass:"artData card-text"},[_vm._v(_vm._s(post.data.slice(0,10)))]),_vm._v(" "),_c('p',{staticClass:"card-text"},[_vm._v(_vm._s(post.descr))]),_vm._v(" "),_c('br')],1)})],2)],1)])}
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('label',{staticClass:"btn btn-primary mb-4 mt-4"},[_vm._v("\n                  Choose an image\n                  "),_c('input',{staticStyle:{"position":"fixed","top":"-100em"},attrs:{"type":"file","id":"image"}})])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -15724,7 +15763,7 @@ if (inBrowser && window.Vue) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_home_vue__ = __webpack_require__(15);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_cf4a01d0_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_home_vue__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_639992d4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_home_vue__ = __webpack_require__(49);
 function injectStyle (ssrContext) {
   __webpack_require__(47)
 }
@@ -15744,7 +15783,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_home_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_cf4a01d0_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_home_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_639992d4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_home_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -15765,7 +15804,7 @@ var content = __webpack_require__(48);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("3386218b", content, true, {});
+var update = __webpack_require__(1)("50a960c2", content, true, {});
 
 /***/ }),
 /* 48 */
@@ -15786,8 +15825,8 @@ exports.push([module.i, ".about{padding:20px;border-radius:10px;margin-top:140px
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('slider'),_vm._v(" "),_c('anag'),_vm._v(" "),_vm._m(0)],1)}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"about "},[_c('p',{staticClass:"textAbout"},[_vm._v("About me..")]),_vm._v(" "),_c('p',{staticClass:"text1"},[_vm._v("Benvenuto! Mi chiamo Sedoni Enrico ed ho 21 anni. Sono un ragazzo con la passione per l'informatica e la programmazione.\n         Attualmente sto frequentando un corso di laurea in informatica presso l'università di Modena e Reggio Emilia (UNIMORE).\n        Sono al terzo anno, quindi valuto offerte di lavoro sia part-time che full-time."),_c('br'),_c('br'),_vm._v("\n        Questo è un sito realizzato interamente da me e verrà utlizzato come portfolio dei miei progetti personali.")]),_vm._v(" "),_c('div',{staticClass:"aboutImm"},[_c('img',{attrs:{"src":"src/assets/about1.png","width":"180","height":"145"}})])])}]
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{directives:[{name:"touch",rawName:"v-touch:swipe.left",value:(_vm.swipeHandlerLeft),expression:"swipeHandlerLeft",arg:"swipe",modifiers:{"left":true}}]},[_c('div',[_c('slider'),_vm._v(" "),_c('anag'),_vm._v(" "),_vm._m(0)],1)])}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"about "},[_c('p',{staticClass:"textAbout"},[_vm._v("About me..")]),_vm._v(" "),_c('p',{staticClass:"text1"},[_vm._v("Benvenuto! Mi chiamo Sedoni Enrico ed ho 21 anni. Sono un ragazzo con la passione per l'informatica e la programmazione.\n          Attualmente sto frequentando un corso di laurea in informatica presso l'università di Modena e Reggio Emilia (UNIMORE).\n          Sono al terzo anno, quindi valuto offerte di lavoro sia part-time che full-time."),_c('br'),_c('br'),_vm._v("\n          Questo è un sito realizzato interamente da me e verrà utlizzato come portfolio dei miei progetti personali.")]),_vm._v(" "),_c('div',{staticClass:"aboutImm"},[_c('img',{attrs:{"src":"src/assets/about1.png","width":"180","height":"145"}})])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
@@ -15798,7 +15837,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_contacts_vue__ = __webpack_require__(16);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5447944e_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_contacts_vue__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5106f7ef_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_contacts_vue__ = __webpack_require__(53);
 function injectStyle (ssrContext) {
   __webpack_require__(51)
 }
@@ -15813,12 +15852,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-5447944e"
+var __vue_scopeId__ = "data-v-5106f7ef"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_contacts_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5447944e_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_contacts_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5106f7ef_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_contacts_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -15839,7 +15878,7 @@ var content = __webpack_require__(52);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("a7df44c6", content, true, {});
+var update = __webpack_require__(1)("9633807a", content, true, {});
 
 /***/ }),
 /* 52 */
@@ -15850,7 +15889,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, ".text[data-v-5447944e]{padding:20px;border-radius:10px;margin-top:140px;margin-left:100px;width:58%;height:460px;background-color:#3498db;opacity:0;animation-name:entry-data-v-5447944e;animation-duration:.4s;animation-timing-function:ease-in;animation-fill-mode:forwards}@keyframes entry-data-v-5447944e{0%{opacity:0}to{opacity:1}}a[data-v-5447944e]{margin-left:10px}h2[data-v-5447944e]{text-align:center;padding-bottom:20px;font-weight:700}#mail[data-v-5447944e]{font-weight:700}p[data-v-5447944e],span[data-v-5447944e]{font-size:11pt}@media (max-width:992px){.text[data-v-5447944e]{width:100vw;margin-left:0;border-radius:0;margin-top:300px;height:500px}}", ""]);
+exports.push([module.i, ".text[data-v-5106f7ef]{padding:20px;border-radius:10px;margin-top:140px;margin-left:100px;width:58%;height:460px;background-color:#3498db;opacity:0;animation-name:entry-data-v-5106f7ef;animation-duration:.4s;animation-timing-function:ease-in;animation-fill-mode:forwards}@keyframes entry-data-v-5106f7ef{0%{opacity:0}to{opacity:1}}a[data-v-5106f7ef]{margin-left:10px}h2[data-v-5106f7ef]{text-align:center;padding-bottom:20px;font-weight:700}#mail[data-v-5106f7ef]{font-weight:700}p[data-v-5106f7ef],span[data-v-5106f7ef]{font-size:11pt}@media (max-width:992px){.text[data-v-5106f7ef]{width:100vw;margin-left:0;border-radius:0;margin-top:300px;height:500px}}", ""]);
 
 // exports
 
@@ -15860,7 +15899,7 @@ exports.push([module.i, ".text[data-v-5447944e]{padding:20px;border-radius:10px;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('slider'),_vm._v(" "),_c('anag'),_vm._v(" "),_c('div',{staticClass:"text"},[_c('h2',[_vm._v("Informazioni")]),_vm._v(" "),_c('p',[_vm._v("Per qualsiasi informazione puoi contattarmi alla seguente mail: "),_c('span',{attrs:{"id":"mail"}},[_vm._v(_vm._s(_vm.mail))])]),_vm._v(" "),_c('br'),_vm._v(" "),_c('p',[_vm._v("Di seguito sono presenti i link ai miei vari social e il mio profilo github in cui pubblico i miei ultimi lavori.")]),_vm._v(" "),_vm._m(0)])],1)}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{directives:[{name:"touch",rawName:"v-touch:swipe.right",value:(_vm.swipeHandlerRight),expression:"swipeHandlerRight",arg:"swipe",modifiers:{"right":true}}]},[_c('div',[_c('slider'),_vm._v(" "),_c('anag'),_vm._v(" "),_c('div',{staticClass:"text"},[_c('h2',[_vm._v("Informazioni")]),_vm._v(" "),_c('p',[_vm._v("Per qualsiasi informazione puoi contattarmi alla seguente mail: "),_c('span',{attrs:{"id":"mail"}},[_vm._v(_vm._s(_vm.mail))])]),_vm._v(" "),_c('br'),_vm._v(" "),_c('p',[_vm._v("Di seguito sono presenti i link ai miei vari social e il mio profilo github in cui pubblico i miei ultimi lavori.")]),_vm._v(" "),_vm._m(0)])],1)])}
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('span',[_vm._v("Facebook: ")]),_vm._v(" "),_c('a',{attrs:{"href":"https://www.facebook.com/xXEnricoXx","target":"_blank"}},[_c('img',{attrs:{"src":"src/assets/facebook.png","width":"24","height":"24"}})]),_c('br'),_c('br'),_vm._v(" "),_c('span',[_vm._v("Instagram: ")]),_vm._v(" "),_c('a',{attrs:{"href":"https://www.instagram.com/enri_sedo/?hl=it","target":"_blank"}},[_c('img',{attrs:{"src":"src/assets/instagram.png","width":"24","height":"24"}})]),_c('br'),_c('br'),_vm._v(" "),_c('span',[_vm._v("Linkedin: ")]),_vm._v(" "),_c('a',{attrs:{"href":"https://www.linkedin.com/in/enrico-sedoni-0818ab12b/","target":"_blank"}},[_c('img',{attrs:{"src":"src/assets/linkedin.png","width":"24","height":"24"}})]),_c('br'),_c('br'),_vm._v(" "),_c('span',[_vm._v("Github: ")]),_vm._v(" "),_c('a',{attrs:{"href":"https://github.com/enrico404","target":"_blank"}},[_c('img',{attrs:{"src":"src/assets/github.png","width":"24","height":"24"}})])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -17510,6 +17549,301 @@ if (typeof window !== 'undefined' && window.Vue) {
 /***/ (function(module, exports) {
 
 /* (ignored) */
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ *
+ * @author    Jerry Bendy
+ * @since     4/12/2017
+ */
+
+function touchX(event) {
+    return event.touches[0].clientX;
+}
+
+function touchY(event) {
+    return event.touches[0].clientY;
+}
+
+var isPassiveSupported = (function() {
+    var supportsPassive = false;
+    try {
+        var opts = Object.defineProperty({}, 'passive', {
+            get: function() {
+                supportsPassive = true;
+            }
+        });
+        window.addEventListener('test', null, opts);
+    } catch (e) {}
+    return supportsPassive;
+})()
+
+
+var vueTouchEvents = {
+    install: function (Vue, options) {
+
+        // Set default options
+        options = Object.assign({}, {
+            disableClick: false,
+            tapTolerance: 10,
+            swipeTolerance: 30,
+            longTapTimeInterval: 400,
+            touchClass: ''
+        }, options || {})
+
+
+        function touchStartEvent(event) {
+            var $this = this.$$touchObj
+
+            $this.supportTouch = true
+
+            if ($this.touchStarted) {
+                return
+            }
+
+            addTouchClass(this)
+
+            $this.touchStarted = true
+
+            $this.touchMoved = false
+            $this.swipeOutBounded = false
+
+            $this.startX = touchX(event)
+            $this.startY = touchY(event)
+
+            $this.currentX = 0
+            $this.currentY = 0
+
+            $this.touchStartTime = event.timeStamp
+        }
+
+        function touchMoveEvent(event) {
+            var $this = this.$$touchObj
+
+            $this.currentX = touchX(event)
+            $this.currentY = touchY(event)
+
+            if (!$this.touchMoved) {
+                var tapTolerance = options.tapTolerance
+
+                $this.touchMoved = Math.abs($this.startX - $this.currentX) > tapTolerance ||
+                    Math.abs($this.startY - $this.currentY) > tapTolerance
+
+            } else if (!$this.swipeOutBounded) {
+                var swipeOutBounded = options.swipeTolerance
+
+                $this.swipeOutBounded = Math.abs($this.startX - $this.currentX) > swipeOutBounded &&
+                    Math.abs($this.startY - $this.currentY) > swipeOutBounded
+            }
+        }
+
+        function touchCancelEvent() {
+            var $this = this.$$touchObj
+
+            removeTouchClass(this)
+
+            $this.touchStarted = $this.touchMoved = false
+            $this.startX = $this.startY = 0
+        }
+
+        function touchEndEvent(event) {
+            var $this = this.$$touchObj
+
+            $this.touchStarted = false
+
+            removeTouchClass(this)
+
+            if (!$this.touchMoved) {
+                // detect if this is a longTap event or not
+                if ($this.callbacks.longtap && event.timeStamp - $this.touchStartTime > options.longTapTimeInterval) {
+                    event.preventDefault()
+                    triggerEvent(event, this, 'longtap')
+
+                } else {
+                    // emit tap event
+                    triggerEvent(event, this, 'tap')
+                }
+
+            } else if (!$this.swipeOutBounded) {
+                var swipeOutBounded = options.swipeTolerance, direction
+
+                if (Math.abs($this.startX - $this.currentX) < swipeOutBounded) {
+                    direction = $this.startY > $this.currentY ? "top" : "bottom"
+
+                } else {
+                    direction = $this.startX > $this.currentX ? "left" : "right"
+                }
+
+                // Only emit the specified event when it has modifiers
+                if ($this.callbacks['swipe.' + direction]) {
+                    triggerEvent(event, this, 'swipe.' + direction, direction)
+
+                } else {
+                    // Emit a common event when it has no any modifier
+                    triggerEvent(event, this, 'swipe', direction)
+                }
+            }
+        }
+
+        function clickEvent(event) {
+            var $this = this.$$touchObj
+
+            if (!$this.supportTouch && !options.disableClick) {
+                triggerEvent(event, this, 'tap')
+            }
+        }
+
+        function mouseEnterEvent() {
+            addTouchClass(this)
+        }
+
+        function mouseLeaveEvent() {
+            removeTouchClass(this)
+        }
+
+        function triggerEvent(e, $el, eventType, param) {
+            var $this = $el.$$touchObj
+
+            // get the callback list
+            var callbacks = $this.callbacks[eventType] || []
+            if (callbacks.length === 0) {
+                return null
+            }
+
+            for (var i = 0; i < callbacks.length; i++) {
+                var binding = callbacks[i]
+
+                // handle `self` modifier`
+                if (binding.modifiers.self && e.target !== e.currentTarget) {
+                    continue
+                }
+
+                if (typeof binding.value === 'function') {
+                    if (param) {
+                        binding.value(param, e)
+                    } else {
+                        binding.value(e)
+                    }
+                }
+            }
+        }
+
+        function addTouchClass($el) {
+            var className = $el.$$touchClass || options.touchClass
+            className && $el.classList.add(className)
+        }
+
+        function removeTouchClass($el) {
+            var className = $el.$$touchClass || options.touchClass
+            className && $el.classList.remove(className)
+        }
+
+        Vue.directive('touch', {
+            bind: function ($el, binding) {
+
+                $el.$$touchObj = $el.$$touchObj || {
+                        // will change to true when `touchstart` event first trigger
+                        supportTouch: false,
+                        // an object contains all callbacks registered,
+                        // key is event name, value is an array
+                        callbacks: {},
+                        // prevent bind twice, set to true when event bound
+                        hasBindTouchEvents: false
+                    }
+
+
+                // register callback
+                var eventType = binding.arg || 'tap'
+                switch (eventType) {
+                    case 'swipe':
+                        var _m = binding.modifiers
+                        if (_m.left || _m.right || _m.top || _m.bottom) {
+                            for (var i in binding.modifiers) {
+                                if (['left', 'right', 'top', 'bottom'].indexOf(i) >= 0) {
+                                    var _e = 'swipe.' + i
+                                    $el.$$touchObj.callbacks[_e] = $el.$$touchObj.callbacks[_e] || []
+                                    $el.$$touchObj.callbacks[_e].push(binding)
+                                }
+                            }
+                        } else {
+                            $el.$$touchObj.callbacks.swipe = $el.$$touchObj.callbacks.swipe || []
+                            $el.$$touchObj.callbacks.swipe.push(binding)
+                        }
+                        break
+
+                    default:
+                        $el.$$touchObj.callbacks[eventType] = $el.$$touchObj.callbacks[eventType] || []
+                        $el.$$touchObj.callbacks[eventType].push(binding)
+                }
+
+                // prevent bind twice
+                if ($el.$$touchObj.hasBindTouchEvents) {
+                    return
+                }
+
+                var passiveOpt = isPassiveSupported ? { passive: true } : false;
+                $el.addEventListener('touchstart', touchStartEvent, passiveOpt)
+                $el.addEventListener('touchmove', touchMoveEvent, passiveOpt)
+                $el.addEventListener('touchcancel', touchCancelEvent)
+                $el.addEventListener('touchend', touchEndEvent)
+
+                if (!options.disableClick) {
+                    $el.addEventListener('click', clickEvent)
+                    $el.addEventListener('mouseenter', mouseEnterEvent)
+                    $el.addEventListener('mouseleave', mouseLeaveEvent)
+                }
+
+                // set bind mark to true
+                $el.$$touchObj.hasBindTouchEvents = true
+            },
+
+            unbind: function ($el) {
+                $el.removeEventListener('touchstart', touchStartEvent)
+                $el.removeEventListener('touchmove', touchMoveEvent)
+                $el.removeEventListener('touchcancel', touchCancelEvent)
+                $el.removeEventListener('touchend', touchEndEvent)
+
+                if (!options.disableClick) {
+                    $el.removeEventListener('click', clickEvent)
+                    $el.removeEventListener('mouseenter', mouseEnterEvent)
+                    $el.removeEventListener('mouseleave', mouseLeaveEvent)
+                }
+
+                // remove vars
+                delete $el.$$touchObj
+            }
+        })
+
+        Vue.directive('touch-class', {
+            bind: function ($el, binding) {
+                $el.$$touchClass = binding.value
+            },
+            unbind: function ($el) {
+                delete $el.$$touchClass
+            }
+        })
+    }
+}
+
+
+/*
+ * Exports
+ */
+if (true) {
+    module.exports = vueTouchEvents
+
+} else if (typeof define === 'function' && define.amd) {
+    define([], function () {
+        return vueTouchEvents
+    })
+} else if (window.Vue) {
+    window.vueTouchEvents = vueTouchEvents
+    Vue.use(vueTouchEvents)
+}
+
 
 /***/ })
 /******/ ]);

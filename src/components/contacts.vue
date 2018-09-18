@@ -1,4 +1,5 @@
 <template>
+<span v-touch:swipe.right="swipeHandlerRight">
 <div>
     <slider></slider>
     <anag></anag>
@@ -27,6 +28,7 @@
             </div>
     </div>
 </div>
+</span>
 </template>
 
 <script>
@@ -50,6 +52,16 @@ export default {
         mail:'sedoni.enrico@gmail.com'
 
     }
+  },
+  methods:{
+
+    swipeHandlerRight(){
+
+      
+      this.$router.push('/blog');
+
+    },
+
   }
 }
 </script>

@@ -187,7 +187,7 @@ export default {
   mounted(){
 
   
-    document.getElementById('curriculum').style.display = 'none';
+
 
 
     if(Vue.prototype.$logged == true){
@@ -268,7 +268,7 @@ export default {
 }
 .blog{
   height: 40%;
-
+  margin-top: 280px;
 
 }
 

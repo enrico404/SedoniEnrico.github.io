@@ -26,6 +26,9 @@
                 <img src="src/assets/github.png" width="24" height="24" />
               </a>
             </div>
+            <div class="aboutImm">
+            <img src="src/assets/info.png" width="120" height="120"  />
+          </div>
     </div>
 </div>
 </span>
@@ -66,7 +69,14 @@ export default {
 }
 </script>
 
+
 <style scoped>
+.aboutImm{
+  float: right;
+  margin-right: 100px;
+  margin-top: -80px;
+
+}
 .text{
   padding: 20px 20px;
   width: 100%;
@@ -120,6 +130,14 @@ p, span {
     margin-top: 300px;
     height: 500px;
 
+  }
+
+
+}
+
+@media(max-width: 576px){
+  .aboutImm{
+    display: none;
   }
 
 

@@ -17,7 +17,7 @@
                 <img src="src/assets/github.png" width="22" height="22" />
               </a>
             </div>
-      <div class="cv">
+      <div class="cv" id="curriculum">
         <img style="cursor:pointer" src="src/assets/CV.png" width="60" height="60" onclick="window.open('https://drive.google.com/open?id=1bVHieS-BTC9oAuuliw7WWBJFjmHJ0Fo7')"/>
         <button type="button" class="btn btn-primary" onclick="window.open('https://drive.google.com/open?id=1bVHieS-BTC9oAuuliw7WWBJFjmHJ0Fo7')">Download my CV</button>
       </div>
@@ -58,8 +58,11 @@ export default {
 }
 .cv{
 
-  margin-top: 100px;
-
+      margin-top: 170px;
+      top: 550px;
+      left: 15%;
+      position: absolute;
+      
 
 }
 
@@ -73,18 +76,28 @@ export default {
   font-size: 8.5pt;
   border-radius: 10px;
   padding: 10px 16px;
-  margin-top: 20px;
+  margin-top:20px;
   margin-right: 40px;
   float: right;
 
   }
+.profileImg{
+
+  width:220px;
+  height:220px;
+}
+.social{
+  margin-top: 10px;
+  margin-left: 12px;
+
+}
 
 
 @media (max-width: 992px){
     .cv{
       margin-top: 0px;
       top: 550px;
-      left: 110px;
+      left: 10%;
       position: absolute;
 
     }
@@ -109,19 +122,20 @@ export default {
 @media (max-width: 768px){
   .cv{
     top: 450px;
-    left: 24%;
+    left: 30%;
+    
 
   }
 
    .dataAnag{
 
-      margin-top: 40px;
+      margin-top: 80px;
       left: 18%;
       position: absolute;
 
     }
     .profileImg{
-       margin-top: 60px;
+       margin-top: 80px;
        width:180px !important;
        height:180px !important;
        left: 48%;
@@ -130,7 +144,7 @@ export default {
     }
 
     .social{
-      top: 720px;
+      top: 740px;
       position: absolute;
       left: 48%;
 
@@ -143,8 +157,9 @@ export default {
 @media (max-width: 576px){
 
   .cv{
-      top: 415px;
+      top: 430px;
       left: 24%;
+      
 
     }
   .dataAnag{
@@ -152,7 +167,7 @@ export default {
   }
 
   .social{
-  top: 695px;
+  top: 715px;
   left: 30%;
 
 }
@@ -164,16 +179,7 @@ export default {
     }
 }
 
-.profileImg{
 
-  width:220px;
-  height:220px;
-}
-.social{
-  margin-top: 10px;
-  margin-left: 12px;
-
-}
 
 
 </style>

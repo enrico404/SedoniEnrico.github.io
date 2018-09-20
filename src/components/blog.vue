@@ -179,6 +179,7 @@ export default {
 
     this.getArticles();
      
+   
 
 
   },
@@ -186,7 +187,9 @@ export default {
   mounted(){
 
   
-    
+    document.getElementById('curriculum').style.display = 'none';
+
+
     if(Vue.prototype.$logged == true){
 
 

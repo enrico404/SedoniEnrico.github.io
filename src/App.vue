@@ -1,8 +1,8 @@
 <template>
-  <div id="app" class="body">
+  <div id="app" class="centerBody">
 
 
-    
+
         <keep-alive>
             <MyHeader></MyHeader>
         </keep-alive>
@@ -52,10 +52,25 @@ export default {
 <style>
 
 
-
-.body{
+.centerBody{
   background-color: #ecf0f1;
+}
+body{
+  background-color: #e0e0e0;
   height: 100%;
+  
+ 
+}
+
+
+@media(min-width: 992px){
+
+  body{
+    padding-left: 10%;
+    padding-right: 10%;
+
+
+  }
 
 }
 </style>

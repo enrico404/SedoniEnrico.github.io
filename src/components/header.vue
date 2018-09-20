@@ -212,14 +212,14 @@ a:hover{
 .HeadGroup{
   position: fixed;
   z-index: 1;
-  width: 100%;
+  width: 100vw;
+  margin-left: -10%;
 }
 
 .title{
 
-  width: 100%;
+  width: 100vw;
   background-color: #2980b9;
-  margin: 5x 5px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -231,10 +231,11 @@ a:hover{
   font-family: Arial, Helvetica, sans-serif;
 }
 .nb{
-  width: 100%;
+  width: 100vw;
   background-color:white;
-  opacity: 0.99;
+  opacity: 0.96;
   padding-bottom: 10px;
+  box-shadow: 0px 2px 3px #888888;
 }
 .nav-item{
 
@@ -275,6 +276,7 @@ input{
 }
 ul{
   float: right;
+  margin-right: 15px;
 
 }
 
@@ -295,9 +297,23 @@ input:focus{
   
 }
 
+@media(max-width: 991px){
+
+ .HeadGroup{
+    margin-left: 0px;
+  }
+
+
+
+}
+
+
 /* responsive */
 
 @media (max-width: 576px){
+  .HeadGroup{
+    margin-left: 0px;
+  }
 
   .nb > ul{
     float: left;

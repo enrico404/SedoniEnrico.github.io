@@ -69,11 +69,11 @@ export default {
 <style scoped>
 .text{
   padding: 20px 20px;
-  border-radius:10px;
-  margin-top: 140px;
-  margin-left: 100px;
-  width: 58%;
-  height: 460px;
+  width: 100%;
+  margin-left: 0px;
+  border-radius: 0px;
+  margin-top: 320px;
+  height: 565px;
   background-color: #3498db;
   opacity: 0;
   animation-name: entry;

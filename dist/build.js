@@ -12849,7 +12849,7 @@ module.exports = function listToStyles (parentId, list) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_header_vue__ = __webpack_require__(8);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5c4f7fba_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_50cbdf45_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__ = __webpack_require__(29);
 function injectStyle (ssrContext) {
   __webpack_require__(27)
 }
@@ -12864,12 +12864,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-5c4f7fba"
+var __vue_scopeId__ = "data-v-50cbdf45"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_header_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5c4f7fba_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_50cbdf45_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -12890,7 +12890,7 @@ var content = __webpack_require__(28);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("51a98971", content, true, {});
+var update = __webpack_require__(1)("9afed5c0", content, true, {});
 
 /***/ }),
 /* 28 */
@@ -12901,7 +12901,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, ".nb>.btn[data-v-5c4f7fba]{margin-top:15px;position:fixed;background-color:transparent;font-weight:700;border-radius:10px;text-decoration:underline;left:0}.nb>.btn[data-v-5c4f7fba]:hover{background-color:#43ae97;color:#fff}.router-link-exact-active>a[data-v-5c4f7fba]{background-color:#43ae97;border-radius:10px;color:#fff;animation-name:selectedMenu-data-v-5c4f7fba;animation-duration:.28s;animation-timing-function:linear}@keyframes selectedMenu-data-v-5c4f7fba{0%{transform:scale(0)}50%{transform:scale(1)}80%{transform:scale(.9)}to{transform:scale(1)}}a[data-v-5c4f7fba]{color:#000;font-weight:700;font-size:11.5pt;text-decoration:none}a[data-v-5c4f7fba]:hover{color:#95a5a6;transition:.1s ease-in}.HeadGroup[data-v-5c4f7fba]{position:fixed;z-index:1;width:100%}.title[data-v-5c4f7fba]{width:100%;background-color:#2980b9;margin:5x 5px;padding-top:5px;padding-bottom:5px}.name[data-v-5c4f7fba]{font-size:40px;text-align:center;color:#fff;font-family:Arial,Helvetica,sans-serif}.nb[data-v-5c4f7fba]{width:100%;background-color:#fff;opacity:.99;padding-bottom:10px}.nav-item[data-v-5c4f7fba]{padding-top:10px;height:50px;padding-bottom:10px}input[data-v-5c4f7fba]{width:90%}.loginB[data-v-5c4f7fba]{float:right;margin-right:20px}.cancelB[data-v-5c4f7fba]{float:left;margin-left:0}.log[data-v-5c4f7fba]{position:fixed;background-color:#fff;border:1px solid gray;left:33%;top:20%;border-radius:10px;padding:20px;width:300px}ul[data-v-5c4f7fba]{float:right}.nb[data-v-5c4f7fba]{padding-bottom:60px}input[data-v-5c4f7fba]{border:none;border-bottom:1px solid #3498db;transition:.4s}input[data-v-5c4f7fba]:focus{outline:none;background-color:#ecf0f1}@media (max-width:576px){.nb>ul[data-v-5c4f7fba]{float:left;padding-top:45px}.nb[data-v-5c4f7fba]{padding-bottom:110px}.nb>.btn[data-v-5c4f7fba]{float:left;left:-18px}.log[data-v-5c4f7fba]{left:18%}}", ""]);
+exports.push([module.i, ".nb>.btn[data-v-50cbdf45]{margin-top:15px;position:fixed;background-color:transparent;font-weight:700;border-radius:10px;text-decoration:underline;left:0}.nb>.btn[data-v-50cbdf45]:hover{background-color:#43ae97;color:#fff}.router-link-exact-active>a[data-v-50cbdf45]{background-color:#43ae97;border-radius:10px;color:#fff;animation-name:selectedMenu-data-v-50cbdf45;animation-duration:.28s;animation-timing-function:linear}.router-link-exact-active>a[data-v-50cbdf45]:hover{color:#fff}@keyframes selectedMenu-data-v-50cbdf45{0%{transform:scale(0)}50%{transform:scale(1)}80%{transform:scale(.9)}to{transform:scale(1)}}a[data-v-50cbdf45]{color:#000;font-weight:700;font-size:11.5pt;text-decoration:none}a[data-v-50cbdf45]:hover{transition:.1s ease-in}.HeadGroup[data-v-50cbdf45]{position:fixed;z-index:1;width:100%}.title[data-v-50cbdf45]{width:100%;background-color:#2980b9;margin:5x 5px;padding-top:5px;padding-bottom:5px}.name[data-v-50cbdf45]{font-size:40px;text-align:center;color:#fff;font-family:Arial,Helvetica,sans-serif}.nb[data-v-50cbdf45]{width:100%;background-color:#fff;opacity:.99;padding-bottom:10px}.nav-item[data-v-50cbdf45]{padding-top:10px;height:50px;padding-bottom:10px}input[data-v-50cbdf45]{width:90%}.loginB[data-v-50cbdf45]{float:right;margin-right:20px}.cancelB[data-v-50cbdf45]{float:left;margin-left:0}.log[data-v-50cbdf45]{position:fixed;background-color:#fff;border:1px solid gray;left:33%;top:20%;border-radius:10px;padding:20px;width:300px}ul[data-v-50cbdf45]{float:right}.nb[data-v-50cbdf45]{padding-bottom:60px}input[data-v-50cbdf45]{border:none;border-bottom:1px solid #3498db;transition:.4s}input[data-v-50cbdf45]:focus{outline:none;background-color:#ecf0f1}@media (max-width:576px){.nb>ul[data-v-50cbdf45]{float:left;padding-top:45px}.nb[data-v-50cbdf45]{padding-bottom:110px}.nb>.btn[data-v-50cbdf45]{float:left;left:-18px}.log[data-v-50cbdf45]{left:18%}}", ""]);
 
 // exports
 

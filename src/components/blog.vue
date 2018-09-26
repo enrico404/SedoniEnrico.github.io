@@ -402,6 +402,7 @@ input{
 
   font-weight:bold;
   transition: 0.2s ease-in;
+  font-size: 16pt;
 
 }
 
@@ -473,8 +474,8 @@ input{
 
   .card-img-top{
 
-      width: 200px;
-      height: 100px
+      width: 220px;
+      height: 110px
   }
   .inputPost{
     left: 0%;
@@ -483,7 +484,11 @@ input{
 
   }
 
+.removeB{
 
+    margin-left: 125%;
+
+  }
   
 }
 

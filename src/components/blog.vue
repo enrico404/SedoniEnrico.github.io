@@ -34,7 +34,8 @@
                 </label>
             </div>
 
-      <div class="card articolo" v-for="post in filteredPosts" :key="post.titolo" >
+      <div class="card articolo" v-for="post in filteredPosts" :key="post.titolo" v-show="!post.del" >
+        <button class="removeB " v-on:click="removePost(post)">X</button>
         <img class="card-img-top" v-bind:src="'src/assets/'+ post.img" alt="card image" />
         <br>
         <router-link style="text-decoration:none" v-bind:to="'/blog/'+post.titolo"><h4 class="titoloArt card-title">{{ post.titolo | toUpperString}}</h4></router-link>
@@ -77,7 +78,9 @@ export default {
           titolo: '',
           descr:'',
           data: '',
-          img: ''
+          img: '',
+          // boolean variable that indicates if article is deleted or not
+          del: ''
          
 
         },
@@ -93,6 +96,22 @@ export default {
 
 
   methods:{
+    //metodo per rimuove il singolo articolo dal db
+    removePost(post){
+      console.log("valore di del: ", post.del);
+      console.log("Sto rimuovendo l'articolo: ", post.titolo);
+      this.$http.post('https://frozen-atoll-57034.herokuapp.com/delete', {titolo: post.titolo}).then(function(data){
+
+        console.log("risposta:", data);
+        this.getArticles();   
+
+      });
+    
+     
+
+
+
+    },
 
     swipeHandlerLeft(){
 
@@ -178,7 +197,7 @@ export default {
   created(){
 
     this.getArticles();
-     
+  
    
 
 
@@ -243,7 +262,23 @@ export default {
 
 <style>
 
+.removeB{
+    width: 20px;
+    height: 20px;
+    margin-left:83%;
+    background: none;
+    border: none;
+    color: gray;
+    transition: 0.5s;
+    text-align: center;
+    font-size: 9pt;
+  }
 
+.removeB:hover{
+  background-color: red;
+  color: white;
+
+}
 
 
 .inputSearch{
@@ -296,8 +331,8 @@ export default {
 
 
 .card-img-top{
-  width: 400px;
-  height: 180px;
+  width: 350px;
+  height: 160px;
 
 }
 
@@ -404,6 +439,8 @@ input{
 
   }
 
+
+
 /* responsive */
 @media (max-width: 992px){
   .blog{
@@ -424,6 +461,11 @@ input{
     width: 70%;
 
   }
+  .removeB{
+
+    margin-left: 120%;
+
+  }
 
 }
 
@@ -431,8 +473,8 @@ input{
 
   .card-img-top{
 
-      width: 300px;
-      height: 140px
+      width: 200px;
+      height: 100px
   }
   .inputPost{
     left: 0%;
@@ -441,6 +483,8 @@ input{
 
   }
 
+
+  
 }
 
 

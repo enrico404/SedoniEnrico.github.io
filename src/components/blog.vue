@@ -35,7 +35,7 @@
             </div>
 
       <div class="card articolo" v-for="post in filteredPosts" :key="post.titolo" v-show="!post.del" >
-        <button class="removeB " v-on:click="removePost(post)">X</button>
+        <button class="removeB " id="remB" v-on:click="removePost(post)">X</button>
         <img class="card-img-top" v-bind:src="'src/assets/'+ post.img" alt="card image" />
         <br>
         <router-link style="text-decoration:none" v-bind:to="'/blog/'+post.titolo"><h4 class="titoloArt card-title">{{ post.titolo | toUpperString}}</h4></router-link>
@@ -211,7 +211,7 @@ export default {
 
     if(Vue.prototype.$logged == true){
 
-
+        document.getElementById('remB').style.display = 'block'
         document.getElementById('buttonCreate').style.display = 'block';
       
     }else{
@@ -220,6 +220,7 @@ export default {
 
         try {
            document.getElementById('buttonCreate').style.display = 'block';
+           document.getElementById('remB').style.display = 'block'
           
         } catch (error) {
           console.log("bottone non definito");
@@ -261,7 +262,10 @@ export default {
 </script>
 
 <style>
+#remB{
+  display: none;
 
+}
 .removeB{
     width: 20px;
     height: 20px;

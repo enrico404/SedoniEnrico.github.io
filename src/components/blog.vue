@@ -35,13 +35,16 @@
             </div>
 
       <div class="card articolo" v-for="post in filteredPosts" :key="post.titolo" v-show="!post.del" >
-        <button class="removeB " id="remB" v-on:click="removePost(post)">X</button>
-        <img class="card-img-top" v-bind:src="'src/assets/'+ post.img" alt="card image" />
-        <br>
-        <router-link style="text-decoration:none" v-bind:to="'/blog/'+post.titolo"><h4 class="titoloArt card-title">{{ post.titolo | toUpperString}}</h4></router-link>
+        <button class="removeB " v-on:click="removePost(post)">X</button>
+        <router-link style="text-decoration:none" v-bind:to="'/blog/'+post.titolo">
+          <img class="card-img-top" v-bind:src="'src/assets/'+ post.img" alt="card image" />
+          <br><br>
+          <h4 class="titoloArt card-title">{{ post.titolo | toUpperString}}</h4>
+        </router-link>
         <p class="artData card-text">{{ post.data.slice(0,10) }}</p>
         <p class="card-text">{{ post.descr }}</p>
         <br>
+        <hr>
       </div>
     </div>
 
@@ -202,6 +205,15 @@ export default {
 
 
   },
+  updated(){
+
+   
+       for(let ob of document.getElementsByClassName('removeB')){
+          ob.setAttribute("style", "display:block");
+        }
+
+
+  },
 
   mounted(){
 
@@ -210,8 +222,11 @@ export default {
 
 
     if(Vue.prototype.$logged == true){
+        for(let ob of document.getElementsByClassName('removeB')){
+          ob.setAttribute("style", "display:block");
+        }
 
-        document.getElementById('remB').style.display = 'block'
+
         document.getElementById('buttonCreate').style.display = 'block';
       
     }else{
@@ -219,8 +234,11 @@ export default {
       EventBus.$on("LOG_SUCCESS", function(){
 
         try {
+           for(let ob of document.getElementsByClassName('removeB')){
+               ob.setAttribute("style", "display:block");
+           }
            document.getElementById('buttonCreate').style.display = 'block';
-           document.getElementById('remB').style.display = 'block'
+          
           
         } catch (error) {
           console.log("bottone non definito");
@@ -262,11 +280,9 @@ export default {
 </script>
 
 <style>
-#remB{
-  display: none;
 
-}
 .removeB{
+    display: none;
     width: 20px;
     height: 20px;
     margin-left:83%;
@@ -391,7 +407,7 @@ input{
   width: 60%;
   padding-left: 15px;
   padding-top: 15px;
-  border-bottom: 1px solid gray;
+  
   border-radius: 0px;
   opacity: 0;
   animation-name: entry;
@@ -444,7 +460,10 @@ input{
 
   }
 
-
+hr{
+  border: 0.4px solid gray;
+  width: 50vw;
+}
 
 /* responsive */
 @media (max-width: 992px){
@@ -471,6 +490,10 @@ input{
     margin-left: 120%;
 
   }
+  hr{
+  border: 0.4px solid gray;
+  width: 80vw;
+}
 
 }
 

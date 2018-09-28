@@ -1,36 +1,38 @@
 <template>
 <span v-touch:swipe.right="swipeHandlerRight">
-<div>
+
+
     <slider></slider>
     <anag></anag>
-    <div class="text">
-      <h2>Informazioni</h2>
-      <p>Per qualsiasi informazione puoi contattarmi alla seguente mail: <span id="mail">{{ mail }}</span> </p>
-      <br>
-      <p>Di seguito sono presenti i link ai miei vari social e il mio profilo github in cui pubblico i miei ultimi lavori.</p>
-        <div>
-              <span>Facebook: </span>
-              <a href="https://www.facebook.com/xXEnricoXx" target="_blank">
-                <img src="src/assets/facebook.png" width="24" height="24" />
-              </a><br><br>
-              <span>Instagram: </span>
-               <a href="https://www.instagram.com/enri_sedo/?hl=it" target="_blank">
-                <img src="src/assets/instagram.png" width="24" height="24" />
-              </a><br><br>
-              <span>Linkedin: </span>
-               <a href="https://www.linkedin.com/in/enrico-sedoni-0818ab12b/" target="_blank">
-                <img src="src/assets/linkedin.png" width="24" height="24" />
-              </a><br><br>
-              <span>Github: </span>
-              <a href="https://github.com/enrico404" target="_blank">
-                <img src="src/assets/github.png" width="24" height="24" />
-              </a>
+    <div style="height:800px">
+      <div class="text">
+        <h2>Informazioni</h2>
+        <p>Per qualsiasi informazione puoi contattarmi alla seguente mail: <span id="mail">{{ mail }}</span> </p>
+        <br>
+        <p>Di seguito sono presenti i link ai miei vari social e il mio profilo github in cui pubblico i miei ultimi lavori.</p>
+          <div>
+                <span>Facebook: </span>
+                <a href="https://www.facebook.com/xXEnricoXx" target="_blank">
+                  <img src="src/assets/facebook.png" width="24" height="24" />
+                </a><br><br>
+                <span>Instagram: </span>
+                <a href="https://www.instagram.com/enri_sedo/?hl=it" target="_blank">
+                  <img src="src/assets/instagram.png" width="24" height="24" />
+                </a><br><br>
+                <span>Linkedin: </span>
+                <a href="https://www.linkedin.com/in/enrico-sedoni-0818ab12b/" target="_blank">
+                  <img src="src/assets/linkedin.png" width="24" height="24" />
+                </a><br><br>
+                <span>Github: </span>
+                <a href="https://github.com/enrico404" target="_blank">
+                  <img src="src/assets/github.png" width="24" height="24" />
+                </a>
+              </div>
+              <div class="aboutImm">
+              <img src="src/assets/info.png" width="120" height="120"  />
             </div>
-            <div class="aboutImm">
-            <img src="src/assets/info.png" width="120" height="120"  />
-          </div>
+      </div>
     </div>
-</div>
 </span>
 </template>
 
@@ -89,7 +91,8 @@ export default {
   animation-name: entry;
   animation-duration:0.4s;
   animation-timing-function: ease-in;
-  animation-fill-mode: forwards
+  animation-fill-mode: forwards;
+
 
 }
 @keyframes entry{
@@ -127,7 +130,7 @@ p, span {
     width: 100vw;
     margin-left: 0px;
     border-radius: 0px;
-    margin-top: 300px;
+    /* margin-top: 300px; */
     height: 500px;
 
   }

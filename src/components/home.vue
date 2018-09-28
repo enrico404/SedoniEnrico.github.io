@@ -4,18 +4,19 @@
     <slider></slider>
     
       <anag></anag>
+      <div style="height:800px">
+        <div class="about ">
+            <p class="textAbout">About me..</p>
+            <p class="text1">Benvenuto! Mi chiamo Sedoni Enrico ed ho 21 anni. Sono un ragazzo con la passione per l'informatica e la programmazione.
+            Attualmente sto frequentando un corso di laurea in informatica presso l'università di Modena e Reggio Emilia (UNIMORE).
+            Sono al terzo anno, quindi valuto offerte di lavoro sia part-time che full-time.<br><br>
+            Questo è un sito realizzato interamente da me e verrà utlizzato come portfolio dei miei progetti personali.</p>
+            <div class="aboutImm">
+              <img src="src/assets/about1.png" width="180" height="145"  />
+            </div>
 
-      <div class="about ">
-          <p class="textAbout">About me..</p>
-          <p class="text1">Benvenuto! Mi chiamo Sedoni Enrico ed ho 21 anni. Sono un ragazzo con la passione per l'informatica e la programmazione.
-          Attualmente sto frequentando un corso di laurea in informatica presso l'università di Modena e Reggio Emilia (UNIMORE).
-          Sono al terzo anno, quindi valuto offerte di lavoro sia part-time che full-time.<br><br>
-          Questo è un sito realizzato interamente da me e verrà utlizzato come portfolio dei miei progetti personali.</p>
-          <div class="aboutImm">
-            <img src="src/assets/about1.png" width="180" height="145"  />
-          </div>
-
-        
+          
+        </div>
       </div>
 
     
@@ -72,7 +73,9 @@ export default {
   animation-name: entry;
   animation-duration:0.4s;
   animation-timing-function: ease-in;
-  animation-fill-mode: forwards
+  animation-fill-mode: forwards;
+ 
+
 
 }
 @keyframes entry{
@@ -114,8 +117,8 @@ export default {
     width: 100%;
     margin-left: 0px;
     border-radius: 0px;
-    margin-top: 330px;
-    height: 565px;
+   /*  margin-top: 330px;
+ */ 
 
 
    }

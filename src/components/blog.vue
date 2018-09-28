@@ -208,10 +208,11 @@ export default {
   updated(){
 
    
-       for(let ob of document.getElementsByClassName('removeB')){
-          ob.setAttribute("style", "display:block");
+        if(Vue.prototype.$logged == true){
+          for(let ob of document.getElementsByClassName('removeB')){
+            ob.setAttribute("style", "display:block");
+          }
         }
-
 
   },
 
@@ -291,7 +292,7 @@ export default {
     color: gray;
     transition: 0.5s;
     text-align: center;
-    font-size: 9pt;
+    font-size: 10pt;
   }
 
 .removeB:hover{
@@ -514,8 +515,10 @@ hr{
 .removeB{
 
     margin-left: 125%;
+    font-size: 12pt;
 
   }
+  
   
 }
 

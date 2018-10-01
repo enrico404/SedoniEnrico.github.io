@@ -11675,17 +11675,20 @@ var Component = normalizeComponent(
           user: this.user
 
         }).then(function (data) {
-          console.log(data.body[0].username);
 
-          if (this.user == data.body[0].username && this.psw == data.body[0].password) {
+          try {
+            if (this.user == data.body[0].username && this.psw == data.body[0].password) {
 
-            alert("accesso riuscito!");
-            this.login = "Sei loggato come: " + this.user;
-            this.showFlag = !this.showFlag;
-            __WEBPACK_IMPORTED_MODULE_0__event_bus_js__["a" /* default */].$emit('LOG_SUCCESS');
-            // variabile globale nella istanza vue
-            __WEBPACK_IMPORTED_MODULE_1_vue__["a" /* default */].prototype.$logged = true;
-          } else alert("cedenziali errate, riprova!");
+              alert("accesso riuscito!");
+              this.login = "Sei loggato come: " + this.user;
+              this.showFlag = !this.showFlag;
+              __WEBPACK_IMPORTED_MODULE_0__event_bus_js__["a" /* default */].$emit('LOG_SUCCESS');
+              // variabile globale nella istanza vue
+              __WEBPACK_IMPORTED_MODULE_1_vue__["a" /* default */].prototype.$logged = true;
+            } else alert("cedenziali errate, riprova!");
+          } catch (TypeError) {
+            alert("cedenziali errate, riprova!");
+          }
         });
       } else alert("Devi inserire lo username e la password!");
     },
@@ -12887,7 +12890,7 @@ module.exports = function listToStyles (parentId, list) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_header_vue__ = __webpack_require__(8);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_cbee8ca6_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_10b4ff7c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__ = __webpack_require__(29);
 function injectStyle (ssrContext) {
   __webpack_require__(27)
 }
@@ -12902,12 +12905,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-cbee8ca6"
+var __vue_scopeId__ = "data-v-10b4ff7c"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_header_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_cbee8ca6_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_10b4ff7c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_header_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -12928,7 +12931,7 @@ var content = __webpack_require__(28);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("51e58282", content, true, {});
+var update = __webpack_require__(1)("5021b920", content, true, {});
 
 /***/ }),
 /* 28 */
@@ -12939,7 +12942,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, ".nb>.btn[data-v-cbee8ca6]{margin-top:15px;position:fixed;background-color:transparent;font-weight:700;border-radius:10px;text-decoration:underline;left:0}.nb>.btn[data-v-cbee8ca6]:hover{background-color:#43ae97;color:#fff}.router-link-exact-active>a[data-v-cbee8ca6]{background-color:#43ae97;border-radius:10px;color:#fff;animation-name:selectedMenu-data-v-cbee8ca6;animation-duration:.28s;animation-timing-function:linear}.router-link-exact-active>a[data-v-cbee8ca6]:hover{color:#fff}@keyframes selectedMenu-data-v-cbee8ca6{0%{transform:scale(0)}50%{transform:scale(1)}80%{transform:scale(.9)}to{transform:scale(1)}}a[data-v-cbee8ca6]{color:#000;font-weight:700;font-size:11.5pt;text-decoration:none}a[data-v-cbee8ca6]:hover{transition:.1s ease-in}.HeadGroup[data-v-cbee8ca6]{position:fixed;z-index:1;width:100vw;margin-left:-10%}.title[data-v-cbee8ca6]{width:100vw;background-color:#2980b9;padding-top:5px;padding-bottom:5px}.name[data-v-cbee8ca6]{font-size:40px;text-align:center;color:#fff;font-family:Arial,Helvetica,sans-serif}.nb[data-v-cbee8ca6]{width:100vw;background-color:#fff;opacity:.96;padding-bottom:10px;box-shadow:0 2px 3px #888}.nav-item[data-v-cbee8ca6]{padding-top:10px;height:50px;padding-bottom:10px}input[data-v-cbee8ca6]{width:90%}.loginB[data-v-cbee8ca6]{float:right;margin-right:20px}.cancelB[data-v-cbee8ca6]{float:left;margin-left:0}.log[data-v-cbee8ca6]{position:fixed;background-color:#fff;border:1px solid gray;left:33%;top:20%;border-radius:10px;padding:20px;width:300px}ul[data-v-cbee8ca6]{float:right;margin-right:15px}.nb[data-v-cbee8ca6]{padding-bottom:60px}input[data-v-cbee8ca6]{border:none;border-bottom:1px solid #3498db;transition:.4s}input[data-v-cbee8ca6]:focus{outline:none;background-color:#ecf0f1}@media(max-width:991px){.HeadGroup[data-v-cbee8ca6]{margin-left:0}}@media (max-width:576px){.HeadGroup[data-v-cbee8ca6]{margin-left:0}.nb>ul[data-v-cbee8ca6]{float:left;padding-top:45px}.nb[data-v-cbee8ca6]{padding-bottom:110px}.nb>.btn[data-v-cbee8ca6]{float:left;left:-18px}.log[data-v-cbee8ca6]{left:18%}}", ""]);
+exports.push([module.i, ".nb>.btn[data-v-10b4ff7c]{margin-top:15px;position:fixed;background-color:transparent;font-weight:700;border-radius:10px;text-decoration:underline;left:0}.nb>.btn[data-v-10b4ff7c]:hover{background-color:#43ae97;color:#fff}.router-link-exact-active>a[data-v-10b4ff7c]{background-color:#43ae97;border-radius:10px;color:#fff;animation-name:selectedMenu-data-v-10b4ff7c;animation-duration:.28s;animation-timing-function:linear}.router-link-exact-active>a[data-v-10b4ff7c]:hover{color:#fff}@keyframes selectedMenu-data-v-10b4ff7c{0%{transform:scale(0)}50%{transform:scale(1)}80%{transform:scale(.9)}to{transform:scale(1)}}a[data-v-10b4ff7c]{color:#000;font-weight:700;font-size:11.5pt;text-decoration:none}a[data-v-10b4ff7c]:hover{transition:.1s ease-in}.HeadGroup[data-v-10b4ff7c]{position:fixed;z-index:1;width:100vw;margin-left:-10%}.title[data-v-10b4ff7c]{width:100vw;background-color:#2980b9;padding-top:5px;padding-bottom:5px}.name[data-v-10b4ff7c]{font-size:40px;text-align:center;color:#fff;font-family:Arial,Helvetica,sans-serif}.nb[data-v-10b4ff7c]{width:100vw;background-color:#fff;opacity:.96;padding-bottom:10px;box-shadow:0 2px 3px #888}.nav-item[data-v-10b4ff7c]{padding-top:10px;height:50px;padding-bottom:10px}input[data-v-10b4ff7c]{width:90%}.loginB[data-v-10b4ff7c]{float:right;margin-right:20px}.cancelB[data-v-10b4ff7c]{float:left;margin-left:0}.log[data-v-10b4ff7c]{position:fixed;background-color:#fff;border:1px solid gray;left:33%;top:20%;border-radius:10px;padding:20px;width:300px}ul[data-v-10b4ff7c]{float:right;margin-right:15px}.nb[data-v-10b4ff7c]{padding-bottom:60px}input[data-v-10b4ff7c]{border:none;border-bottom:1px solid #3498db;transition:.4s}input[data-v-10b4ff7c]:focus{outline:none;background-color:#ecf0f1}@media(max-width:991px){.HeadGroup[data-v-10b4ff7c]{margin-left:0}}@media (max-width:576px){.HeadGroup[data-v-10b4ff7c]{margin-left:0}.nb>ul[data-v-10b4ff7c]{float:left;padding-top:45px}.nb[data-v-10b4ff7c]{padding-bottom:110px}.nb>.btn[data-v-10b4ff7c]{float:left;left:-18px}.log[data-v-10b4ff7c]{left:18%}}", ""]);
 
 // exports
 

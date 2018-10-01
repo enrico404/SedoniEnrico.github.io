@@ -98,20 +98,25 @@ export default {
 
 
         }).then(function(data){
-          console.log(data.body[0].username);
+  
+          try {
+                if(this.user == data.body[0].username && this.psw == data.body[0].password){
 
-          if(this.user == data.body[0].username && this.psw == data.body[0].password){
-
-            alert("accesso riuscito!");
-            this.login ="Sei loggato come: "+ this.user;
-            this.showFlag = !this.showFlag;
-            EventBus.$emit('LOG_SUCCESS');
-           // variabile globale nella istanza vue
-            Vue.prototype.$logged = true;
-           
+                alert("accesso riuscito!");
+                this.login ="Sei loggato come: "+ this.user;
+                this.showFlag = !this.showFlag;
+                EventBus.$emit('LOG_SUCCESS');
+              // variabile globale nella istanza vue
+                Vue.prototype.$logged = true;
+              
 
 
-          }else alert("cedenziali errate, riprova!");
+              }else alert("cedenziali errate, riprova!");
+            
+          } catch (TypeError) {
+            alert("cedenziali errate, riprova!");
+          }
+          
 
         });
 

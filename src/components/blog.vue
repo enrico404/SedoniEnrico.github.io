@@ -100,7 +100,12 @@ export default {
 
   methods:{
     //metodo per rimuove il singolo articolo dal db
+    
     removePost(post){
+        if(Vue.prototype.$logged != true){
+        alert("Non sei loggato!!");
+        return;
+      }
       console.log("valore di del: ", post.del);
       console.log("Sto rimuovendo l'articolo: ", post.titolo);
       this.$http.post('https://frozen-atoll-57034.herokuapp.com/delete', {titolo: post.titolo}).then(function(data){
@@ -137,6 +142,10 @@ export default {
     },
 
     posta(){
+      if(Vue.prototype.$logged != true){
+        alert("Non sei loggato!!");
+        return;
+      }
         var today = new Date();
         var dd = today.getDate();
         var mm = today.getMonth()+1; //January is 0

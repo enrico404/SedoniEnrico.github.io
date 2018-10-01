@@ -1,14 +1,6 @@
 <template>
   <div>
-
-       <div class="card articolo" v-for="post in filteredPosts" :key="post.titolo" >
-        <img class="card-img-top" v-bind:src="'src/assets/'+ post.img" alt="card image" />
-        <br>
-        <router-link v-bind:to="'/blog/'+post.titolo"><h4 class="titoloArt card-title">{{ post.titolo | toUpperString}}</h4></router-link>
-        <p class="artData card-text">{{ post.data.slice(0,10) }}</p>
-        <p class="card-text">{{ post.descr }}</p>
-        <br>
-      </div>
+      
     <article class="card art">
         <img class="card-img-top" v-bind:src="'src/assets/'+post[0].img" alt="card img" />
 
@@ -73,7 +65,8 @@ export default {
     animation-name: entry;
     animation-duration:0.4s;
     animation-timing-function: ease-in;
-    animation-fill-mode: forwards
+    animation-fill-mode: forwards;
+    margin-bottom: 280px;
     }
 
 @keyframes entry{

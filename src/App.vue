@@ -6,9 +6,9 @@
         <keep-alive>
             <MyHeader></MyHeader>
         </keep-alive>
-        <keep-alive>
+       
         <router-view></router-view>
-        </keep-alive>
+        
         <keep-alive>
           <MyFooter></MyFooter>
         </keep-alive>

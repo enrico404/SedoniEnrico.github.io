@@ -33,7 +33,7 @@
                   <input type="file" style="position: fixed; top: -100em" id="image" />
                 </label>
             </div>
-
+      <div class="loader" v-show="loading"><img src="../assets/loader.gif" width="120" height="80"></div>
       <div class="card articolo" v-for="post in filteredPosts" :key="post.titolo" v-show="!post.del" >
         <button class="removeB " v-on:click="removePost(post)">X</button>
         <router-link style="text-decoration:none" v-bind:to="'/blog/'+post.titolo">
@@ -74,7 +74,7 @@ export default {
 
   data () {
     return {
-
+        loading: false,
 
         post:{
 
@@ -194,11 +194,12 @@ export default {
     },
 
   getArticles(){
-
+     this.loading = true;
      this.$http.get('https://frozen-atoll-57034.herokuapp.com/blog/get').then(function(data){
-
+      this.loading = false;
       this.posts = data.body;
       this.posts = this.posts.slice().reverse().slice(0,20);
+      
       });
 
 
@@ -290,6 +291,14 @@ export default {
 </script>
 
 <style>
+.loader{
+
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+  margin-bottom: 200px;
+
+}
 
 .removeB{
     display: none;
